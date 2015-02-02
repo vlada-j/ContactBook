@@ -1,0 +1,111 @@
+ .thm1 {background-color:#202024;color:#7D7D7D}
+
+.thm1 .btn,
+.thm1 .btn-block {
+	border:1px solid #0D0D0E;
+	border-top-color:#2E2E30;
+	border-left-color:#2E2E30;
+	background-color:#202024;
+	border-radius:0;}
+.thm1 .btn:hover, .thm1 .btn-block:hover,
+.thm1 .btn:active, .thm1 .btn-block:active {background-color:#2E2E34}
+
+.thm1 #Header,
+.thm1 #SideMenu,
+.thm1 #Content,
+.thm1 #Details {
+	border:1px solid #0D0D0E;
+	border-top-color:#2E2E30;
+	border-left-color:#2E2E30;
+	background-color:#202024}
+.thm1 #Search input[type="text"] {
+	color:#5D5D5D;
+	border:1px solid #2E2E30;
+	border-top-color:#0D0D0E;
+	border-left-color:#0D0D0E;
+	border-bottom:none;
+	background-color:#000}
+.thm1 #Result > li {
+	border:1px solid #0D0D0E;
+	border-top-color:#2E2E30;
+	border-left-color:#2E2E30;}
+.thm1 #Result > li.active {background-color:#2E2E34}
+
+
+
+
+
+.thm2 {
+	background-image: url(wood_wall.jpg);
+	background-position:center center;
+	background-size:cover;
+}
+
+ .thm2 .fa {font-size:30px;line-height:50px}
+ .thm2 small.fa {font-size:20px;line-height:20px}
+ .thm2 #Header {
+	z-index:1;
+	color:#303030;
+	text-shadow:1px 1px 1px #4A4B50, 1px -1px 1px #181818;
+	border-top:1px solid #555;
+	border-left:1px solid #555;
+	border-right:1px solid #2A2B30;
+	border-bottom:1px solid #2A2B30;
+	box-shadow:0 5px 15px rgba(0,0,0,.5);
+	background:#3D3C46;
+	background:-moz-linear-gradient(top,  #3D3C46 0%, #2B2C33 100%);
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0%,#3D3C46), color-stop(100%,#2B2C33));
+	background:-webkit-linear-gradient(top,  #3D3C46 0%,#2B2C33 100%);
+	background:-o-linear-gradient(top,  #3D3C46 0%,#2B2C33 100%);
+	background:-ms-linear-gradient(top,  #3D3C46 0%,#2B2C33 100%);
+	background:linear-gradient(to bottom,  #3D3C46 0%,#2B2C33 100%);}
+.thm2 #Header {
+	border:none;
+	background: url(header.png) repeat-x;}
+.thm2 #Logo {float:left;border:none;text-shadow:none}
+.thm2 #Logo img {height:30px;margin:10px}
+.thm2 #Title {color:inherit}
+.thm2 #blue-line {
+	background: url(blue_line.jpg) repeat-x;
+	background-color: #047dea;
+	height: 27px;
+}
+.thm2 #SideMenu {
+	height:auto;
+	bottom:inherit;
+	box-shadow:0 0 10px rgba(0,0,0,1);}
+.thm2 #SideMenu li {
+	width:100%;
+	height:50px;
+	color:#2A2A2A;
+	background:url(sidemenu_bg.png);
+	border-bottom:1px dotted #BABABA;}
+.thm2 #SideMenu li .icon {
+	float:left;
+	color:#BBB;
+	width:70px;
+	height:50px;
+	background:url(sidemenu_item2.png);}
+.thm2 #SideMenu li.active {
+	color:#FFF;
+	border-bottom:1px solid #155A9B;
+	background:url(sidemenu_active_bg2.png);}
+.thm2 #SideMenu li.active .icon {
+	color:#FFF;
+	float:left;
+	width:70px;
+	height:50px;
+	background:none;
+	/*background:url(sidemenu_item_active.png);*/
+}
+.thm2 #SideMenu ul {margin-bottom:0}
+.thm2 #SideMenu ul:after {
+	display:block;
+	content:'';
+	width:70px;
+	height:72px;
+	left:0;
+	bottom:-72px;
+	position:absolute;
+	background:url(end.png) no-repeat;
+}

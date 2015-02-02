@@ -1,0 +1,8 @@
+<h2>Settings</h2>
+<input type="radio" name="them" value="thm1" ng-model="stage.thm"/>
+<input type="radio" name="them" value="thm2" ng-model="stage.thm"/>
+<br>
+<input type="checkbox" ng-model="stage.sideMenuOpen"/>
+<textarea ng-model="vm.db" readonly style="width:500px" rows="10"></textarea>
+<textarea ng-model="vm.newdb" style="width:500px" rows="10"></textarea>
+<button ng-click="vm.save()">SET</button>

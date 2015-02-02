@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>.:: ContactBook ::.</title>
+	<link rel="stylesheet" href="assets/default.css"/>
+	<link rel="stylesheet" href="assets/font-awesome.min.css"/>
+	<link rel="stylesheet" href="assets/app.css"/>
+	<link rel="stylesheet" href="assets/themes.css"/>
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+</head>
+
+
+
+<body ng-app="App" ng-controller="AppCtrl as stage" class="{{stage.thm}}" ng-class="{sideMenuOpen:stage.sideMenuOpen}">
+
+	<div id="Loader" ng-hide="stage.isLoaded"></div>
+
+	<header id="Header" ng-include="'app/Core/header.tpl.html'"></header>
+
+	<nav id="SideMenu" ng-include="'app/Core/sidemenu.tpl.html'"></nav>
+
+	<section id="Content">
+		<div ui-view></div>
+	</section>
+
+	<div id="Notification"></div>
+
+
+
+
+
+
+
+	<script src="lib/angular.js"></script>
+
+	<script src="lib/angular-ui-router.js"></script>
+	<script src="app/App.js"></script>
+	<script src="app/Core/Core.js"></script>
+	<script src="app/Core/Settings.js"></script>
+	<script src="app/DataBase/DataBase.js"></script>
+	<script src="app/Book/Book.js"></script>
+	<script src="app/Book/Details/Details.js"></script>
+</body>
+</html>
