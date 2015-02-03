@@ -49,7 +49,9 @@ input.ng-valid {border: 1px solid green;}
 	z-index:99999;
 	position:fixed;}
 
+#Logo,
 #Header,
+#Search,
 #SideMenu,
 #Content,
 #Details,
@@ -65,20 +67,18 @@ input.ng-valid {border: 1px solid green;}
 	height:50px;
 	position:fixed}
 #Logo {
+	margin:0;
 	float:left;
-	padding:0;
-	margin:auto;
-	width:200px;
-	height:49px;
-	line-height:50px;
-	text-align:center;
-	border-bottom:1px solid #0D0D0E;}
-#Logo img {height:30px;}
+	width:50px;
+	overflow:hidden;
+	white-space:nowrap;}
+#Logo img {max-height:40px}
+#Logo .text {}
 #Search {
 	float:none;
 	display:block;
 	position:relative;
-	margin-left:210px;
+	margin-left:60px;
 	margin-right:110px;}
 #Search input {width:100%}
 #Search button {
@@ -88,16 +88,25 @@ input.ng-valid {border: 1px solid green;}
 	position:absolute;}
 #AppOptions {float:right}
 
+
+/* Side menu */
 #SideMenu {
 	top:50px;
 	left:0;
 	bottom:0;
 	width:50px;
-	position:fixed}
-#SideMenu .btn-block {
-	margin:0;
-	border-left:none;
-	border-right:none}
+	position:fixed;
+	overflow:hidden;}
+#SideMenu .item {
+	width:100%;
+	white-space:nowrap;}
+#SideMenu .item .icon {float:left;}
+#SideMenu .item .text {}
+#SideMenu .item.active {}
+#SideMenu .item.active .icon {}
+#CollapseMenuButton {}
+
+
 #Content {
 	top:50px;
 	left:0;
@@ -194,6 +203,8 @@ input.ng-valid {border: 1px solid green;}
 	position:absolute;}
 
 #Content {left:50px;padding-bottom:50px}
+.sideMenuOpen #Logo {width:200px}
+.sideMenuOpen #Search {margin-left:210px}
 .sideMenuOpen #SideMenu {width:200px}
 .sideMenuOpen #Content {left:200px}
 
