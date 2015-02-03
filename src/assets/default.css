@@ -1863,34 +1863,3 @@ fieldset[disabled] .btn {
     display: none !important;
   }
 }
-/* *************************************************************************************** */
-::-moz-selection {background:#36C;text-shadow:none;}
-::selection {background:#36C;text-shadow:none;}
-
-::-webkit-scrollbar {width:10px; height:10px; background-color:#130C08;}
-::-webkit-scrollbar-thumb {background-color:#510102;}
-::-webkit-scrollbar-thumb:hover {background-color:#891215;}
-
-ul.nav,ol.nav{list-style:none}
-ul.nav li,ol.nav li {display:inline-block;position:relative}
-ul.nav.ver li,ol.nav.ver li {display:block}
-ul.nav .sub-nav, ol.nav .sub-nav {
-  padding:0;
-  position:absolute;}
-ul.nav .sub-nav > li, ol.nav .sub-nav > li {
-  height:0;
-  overflow:hidden;
-  -webkit-transition:height .3s ease-in-out;
-  -moz-transition:height .3s ease-in-out;
-  -ms-transition:height .3s ease-in-out;
-  -o-transition:height .3s ease-in-out;
-  transition:height .3s ease-in-out;}
-ul.nav li .sub-nav.open > li, ol.nav li .sub-nav.open > li,
-ul.nav li:hover .sub-nav > li, ol.nav li:hover .sub-nav > li {height:20px}
-
-*[class*="icon-"] {
-  border:none;
-  width:30px;
-  height:30px;
-  display:inline-block;
-  background:transparent url(sprite.png) no-repeat left top;}
