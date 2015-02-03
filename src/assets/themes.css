@@ -1,4 +1,15 @@
- .thm1 {background-color:#202024;color:#7D7D7D}
+/* Dev theme */
+.thm0 #Header {background-color:#4A4B50}
+.thm0 #Logo {background-color:#155A9B}
+.thm0 #AppOptions {background-color:#891215}
+.thm0 #Search {background-color:#3D3C46}
+.thm0 #Search input {}
+
+.thm0 #SideMenu {background-color:#155A9B}
+.thm0 #Content {background-color:#EEE}
+.thm0 #Details {background-color:#7D7D7D}
+/* *************************************************************************************** */
+.thm1 {background-color:#202024;color:#7D7D7D}
 
 .thm1 .btn,
 .thm1 .btn-block {
@@ -20,9 +31,8 @@
 	background-color:#202024}
 .thm1 #Search input[type="text"] {
 	color:#5D5D5D;
-	border:1px solid #2E2E30;
-	border-top-color:#0D0D0E;
-	border-left-color:#0D0D0E;
+	border:1px solid #0D0D0E;
+	border-right-color:#2E2E30;
 	border-bottom:none;
 	background-color:#000}
 .thm1 #Result > li {
@@ -47,10 +57,9 @@
 	z-index:1;
 	color:#303030;
 	text-shadow:1px 1px 1px #4A4B50, 1px -1px 1px #181818;
-	border-top:1px solid #555;
-	border-left:1px solid #555;
-	border-right:1px solid #2A2B30;
-	border-bottom:1px solid #2A2B30;
+	border:1px solid #2A2B30;
+	border-top-color:#555;
+	border-left-color:#555;
 	box-shadow:0 5px 15px rgba(0,0,0,.5);
 	background:#3D3C46;
 	background:-moz-linear-gradient(top,  #3D3C46 0%, #2B2C33 100%);
