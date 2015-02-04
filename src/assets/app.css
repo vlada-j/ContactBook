@@ -12,6 +12,8 @@ body {}
 ::-webkit-scrollbar-thumb {background-color:#510102;}
 ::-webkit-scrollbar-thumb:hover {background-color:#891215;}
 
+a {text-decoration:none;color:inherit}
+
 h1, h2, h3, h4, h5 {color:#AFAFAF}
 
 
@@ -40,22 +42,8 @@ ol ol {
 	padding-left: 5px;
 	padding-right: 5px;
 }
+.icon {display:inline-block;}
 
-*[class*="icon-"] {
-	border:none;
-	width:30px;
-	height:30px;
-	display:inline-block;
-	background:transparent url(sprite.png) no-repeat left top;}
-.icon {color:#534C4C}
-.btn,
-.btn-block {
-	min-width:50px;
-	line-height:28px;
-	padding:10px;
-	text-align:center;
-	display:inline-block;}
-.btn-block {display:block}
 
 input.ng-invalid {border: 1px solid red;}
 input.ng-valid {border: 1px solid green;}
@@ -125,6 +113,13 @@ input.ng-valid {border: 1px solid green;}
 	position:absolute;}
 
 #AppOptions {float:right}
+#AppOptions .pure-button {
+	float:left;
+	width:30px;
+	height:30px;
+	padding:0;
+	line-height:30px;
+	margin:10px 10px 10px 0;}
 
 
 /* Side menu */
