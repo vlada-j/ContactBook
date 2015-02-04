@@ -36,7 +36,7 @@ AppCtrl.$inject = ['$rootScope', 'DataBase'];
 function AppCtrl($rootScope, DataBase) {
 	var stage = this;
 	stage.isLoaded = true;
-	stage.thm = 'thm0';
+	stage.thm = 'thm3';
 	stage.sideMenuOpen = true;
 	stage.detailsOpen = false;
 	$rootScope.stage = stage;

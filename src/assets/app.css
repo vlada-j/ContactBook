@@ -11,6 +11,33 @@ body {}
 
 h1, h2, h3, h4, h5 {color:#AFAFAF}
 
+
+ul,
+ol {
+	margin-top: 0;
+	margin-bottom: 10px;
+}
+ul ul,
+ol ul,
+ul ol,
+ol ol {
+	margin-bottom: 0;
+}
+.list-unstyled {
+	padding-left: 0;
+	list-style: none;
+}
+.list-inline {
+	padding-left: 0;
+	list-style: none;
+	margin-left: -5px;
+}
+.list-inline > li {
+	display: inline-block;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
 *[class*="icon-"] {
 	border:none;
 	width:30px;
@@ -53,7 +80,7 @@ input.ng-valid {border: 1px solid green;}
 #Header,
 #Search,
 #SideMenu,
-#Content,
+#Main,
 #Details,
 #Details > [ui-view] {
 	-webkit-transition:all .3s ease-in-out;
@@ -107,13 +134,17 @@ input.ng-valid {border: 1px solid green;}
 #CollapseMenuButton {}
 
 
-#Content {
+#Main {
 	top:50px;
-	left:0;
+	left:50px;
 	right:0;
 	bottom:0;
 	position:fixed;
 	padding-right:0}
+#Main > [ui-view] {height:100%}
+#Content {
+	height:100%;
+	overflow:auto;}
 #Result {
 	width:100%;
 	height:100%;
@@ -202,14 +233,13 @@ input.ng-valid {border: 1px solid green;}
 	overflow:auto;
 	position:absolute;}
 
-#Content {left:50px;padding-bottom:50px}
 .sideMenuOpen #Logo {width:200px}
 .sideMenuOpen #Search {margin-left:210px}
 .sideMenuOpen #SideMenu {width:200px}
-.sideMenuOpen #Content {left:200px}
+.sideMenuOpen #Main {left:200px}
 
-#Content.detailsOpen {padding-right:300px;}
+#Main.detailsOpen {padding-right:300px;}
 .detailsOpen #Details {right:0;}
 
-#Content.ng-enter, #Content.ng-leave.ng-leave-active {opacity:0}
-#Content.ng-leave, #Content.ng-enter.ng-enter-active {opacity:1}
+#Main.ng-enter, #Main.ng-leave.ng-leave-active {opacity:0}
+#Main.ng-leave, #Main.ng-enter.ng-enter-active {opacity:1}

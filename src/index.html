@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<title>.:: ContactBook ::.</title>
-	<link rel="stylesheet" href="assets/default.css"/>
+	<link rel="stylesheet" href="assets/pure-min.css"/>
 	<link rel="stylesheet" href="assets/font-awesome.min.css"/>
 	<link rel="stylesheet" href="assets/app.css"/>
 	<link rel="stylesheet" href="assets/themes.css"/>
@@ -18,9 +18,9 @@
 
 	<header id="Header" ng-include="'app/Core/header.tpl.html'"></header>
 
-	<nav id="SideMenu" ng-include="'app/Core/sidemenu.tpl.html'"></nav>
+	<nav id="SideMenu" class="pure-menu pure-menu-open" ng-include="'app/Core/sidemenu.tpl.html'"></nav>
 
-	<section id="Content">
+	<section id="Main">
 		<div ui-view></div>
 	</section>
 

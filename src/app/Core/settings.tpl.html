@@ -1,8 +1,100 @@
-<h2>Settings</h2>
-<input type="radio" name="them" value="thm1" ng-model="stage.thm"/>
-<input type="radio" name="them" value="thm2" ng-model="stage.thm"/>
-<br>
-<input type="checkbox" ng-model="stage.sideMenuOpen"/>
-<textarea ng-model="vm.db" readonly style="width:500px" rows="10"></textarea>
-<textarea ng-model="vm.newdb" style="width:500px" rows="10"></textarea>
-<button ng-click="vm.save()">SET</button>
+<div id="Content">
+	<h2>Settings</h2>
+	<form class="pure-form">
+			<label class="pure-radio"><input type="radio" name="them" value="thm0" ng-model="stage.thm"/> thm0</label>
+			<label class="pure-radio"><input type="radio" name="them" value="thm1" ng-model="stage.thm"/> thm1</label>
+			<label class="pure-radio"><input type="radio" name="them" value="thm2" ng-model="stage.thm"/> thm2</label>
+			<label class="pure-radio"><input type="radio" name="them" value="thm3" ng-model="stage.thm"/> thm3</label>
+		<input type="checkbox" ng-model="stage.sideMenuOpen"/>
+		<textarea ng-model="vm.db" readonly style="width:500px" rows="10"></textarea>
+		<textarea ng-model="vm.newdb" style="width:500px" rows="10"></textarea>
+		<button ng-click="vm.save()" class="pure-button pure-button-primary">SET</button>
+	</form>
+
+	<form class="pure-form">
+		<fieldset>
+			<legend>A compact inline form</legend>
+
+			<input type="email" placeholder="Email">
+			<input type="password" placeholder="Password">
+
+			<label for="remember">
+				<input id="remember" type="checkbox"> Remember me
+			</label>
+
+			<button type="submit" class="pure-button pure-button-primary">Sign in</button>
+		</fieldset>
+	</form>
+
+	<form class="pure-form pure-form-aligned">
+		<fieldset>
+			<div class="pure-control-group">
+				<label for="name">Username</label>
+				<input id="name" type="text" placeholder="Username">
+			</div>
+
+			<div class="pure-control-group">
+				<label for="password">Password</label>
+				<input id="password" type="password" placeholder="Password">
+			</div>
+
+			<div class="pure-control-group">
+				<label for="email">Email Address</label>
+				<input id="email" type="email" placeholder="Email Address">
+			</div>
+
+			<div class="pure-control-group">
+				<label for="foo">Supercalifragilistic Label</label>
+				<input id="foo" type="text" placeholder="Enter something here...">
+			</div>
+
+			<div class="pure-controls">
+				<label for="cb" class="pure-checkbox">
+					<input id="cb" type="checkbox"> I've read the terms and conditions
+				</label>
+
+				<button type="submit" class="pure-button pure-button-primary">Submit</button>
+			</div>
+		</fieldset>
+	</form>
+
+	<form class="pure-form">
+		<fieldset class="pure-group">
+			<input type="text" class="pure-input-1-2" placeholder="Username">
+			<input type="text" class="pure-input-1-2" placeholder="Password">
+			<input type="email" class="pure-input-1-2" placeholder="Email">
+		</fieldset>
+
+		<fieldset class="pure-group">
+			<input type="text" class="pure-input-1-2" placeholder="Another Group">
+			<input type="text" class="pure-input-1-2" placeholder="More Stuff">
+		</fieldset>
+
+		<button type="submit" class="pure-button pure-input-1-2 pure-button-primary">Sign in</button>
+	</form>
+
+	<form class="pure-form">
+		<label for="option-one" class="pure-checkbox">
+			<input id="option-one" type="checkbox" value="">
+			Here's option one.
+		</label>
+		<label for="option-two" class="pure-checkbox">
+			<input id="option-two" type="checkbox" value="">
+			Here's option one.
+		</label>
+		<label for="option-three" class="pure-checkbox">
+			<input id="option-three" type="checkbox" value="">
+			Here's option one.
+		</label>
+
+		<label for="option-fore" class="pure-radio">
+			<input id="option-fore" type="radio" name="optionsRadios" value="option1" checked>
+			Here's a radio button. You can choose this one..
+		</label>
+
+		<label for="option-five" class="pure-radio">
+			<input id="option-five" type="radio" name="optionsRadios" value="option2">
+			..Or this one!
+		</label>
+	</form>
+</div>
