@@ -131,7 +131,13 @@
 .thm3 #Logo {color:#7E2F28}
 .thm3 #AppOptions {}
 .thm3 #Search {}
-.thm3 #Search input {}
+.thm3 #Search input {
+	color:#AAA;
+	border:1px solid #C1C1C1;
+	background-color:#E5E5E5;}
+.thm3 #Search button {
+	border:none;
+	background:none;}
 
 .thm3 #SideMenu {background-color:#ED6454}
 .thm3 #SideMenu .item {}
@@ -147,14 +153,14 @@
 
 .thm3 #Details {background-color:#46ABE3}
 
-.thm3 form {background-color:#FFF;color:#AAA;}
+.thm3 form {}
 
-input,textarea {
+.input,.textarea {
 	color:#AAA;
 	border:1px solid #C1C1C1;
 	background-color:#E5E5E5;
 }
-button, .pure-button {
+.pure-button {
 	color:#FFF;
 	border:none;
 	font-weight:bold;
