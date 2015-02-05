@@ -139,13 +139,18 @@
 	border:none;
 	background:none;}
 
-.thm3 #SideMenu {background-color:#ED6454}
+.thm3 #SideMenu {
+	border:none;
+	background-color:#2C3E52}
 .thm3 #SideMenu .item {}
-.thm3 #SideMenu .item .icon {background-color:#3D4F63}
-.thm3 #SideMenu .item .text {}
-.thm3 #SideMenu .item.active {}
-.thm3 #SideMenu .item.active .icon {}
-.thm3 #CollapseMenuButton {}
+.thm3 #SideMenu .item .icon {
+	background-color:#3D4F63}
+.thm3 #SideMenu .item .text {background-color:#ED6454}
+.thm3 #SideMenu .item:hover .icon {background-color:#4E5F74}
+.thm3 #SideMenu .item:hover .text {background-color:#FE7565}
+.thm3 #SideMenu .item.active .icon {background-color:#46ABE3}
+.thm3 #SideMenu .item.active .text {background-color:#AE4736}
+.thm3 #CollapseMenuButton {color:#46ABE3;}
 
 .thm3 #Main {background-color:#989898}
 .thm3 #Result {}

@@ -90,8 +90,12 @@ input.ng-valid {border: 1px solid green;}
 	width:50px;
 	overflow:hidden;
 	white-space:nowrap;}
-#Logo img {max-height:40px}
-#Logo .text {}
+#Logo img {
+	float:left;
+	margin:5px;
+	width:40px;
+	max-height:40px}
+#Logo .text {line-height:50px;}
 #Search {
 	float:none;
 	display:block;
@@ -132,12 +136,28 @@ input.ng-valid {border: 1px solid green;}
 	overflow:hidden;}
 #SideMenu .item {
 	width:100%;
+	line-height:50px;
 	white-space:nowrap;}
-#SideMenu .item .icon {float:left;}
-#SideMenu .item .text {}
+#SideMenu .item .icon {
+	float:left;
+	width:50px;
+	height:50px;
+	line-height:50px;
+	font-size:26px;
+	text-align:center;}
+#SideMenu .item .icon small {font-size:60%;padding:3px}
+#SideMenu .item .text {
+	display:block;
+	padding:0 5px 0 60px;}
 #SideMenu .item.active {}
 #SideMenu .item.active .icon {}
-#CollapseMenuButton {}
+#CollapseMenuButton {
+	width:50px;
+	height:30px;
+	font-size:20px;
+	line-height:30px;
+	text-align:center;}
+#CollapseMenuButton .fa:before {content:'\f152';}
 
 
 #Main {
@@ -243,6 +263,7 @@ input.ng-valid {border: 1px solid green;}
 .sideMenuOpen #Search {margin-left:210px}
 .sideMenuOpen #SideMenu {width:200px}
 .sideMenuOpen #Main {left:200px}
+.sideMenuOpen #CollapseMenuButton .fa:before {content:'\f191';}
 
 #Main.detailsOpen {padding-right:300px;}
 .detailsOpen #Details {right:0;}
