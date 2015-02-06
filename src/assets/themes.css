@@ -163,13 +163,14 @@
 .thm3 #Result .item {background-color:#ED6454}
 
 .thm3 #Details {background-color:#46ABE3}
-.thm3 #Details .title {
+.thm3 #Details .title,
+.thm3 #Details .subTitle {
 	color:#FFF;
 	padding:5px 10px;
 	font-weight:bold;
 	text-transform:uppercase;
-	background-color:#3D4F63;
-}
+	background-color:#3D4F63;}
+.thm3 #Details .subTitle {margin:15px 0 5px 0;}
 
 .thm3 form {}
 
