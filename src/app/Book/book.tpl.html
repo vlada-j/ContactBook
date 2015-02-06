@@ -1,4 +1,4 @@
-<section id="Content" ng-class="{detailsOpen:bookView.detailsOpen}">
+<section id="Book" class="content" ng-class="{detailsOpen:bookView.detailsOpen}">
 	#{{bookView.activeId}}#
 	<ul id="Result" class="list-unstyled">
 		<li class="bookItem" item-data="item" to-open="bookView.open" ng-repeat="item in bookView.db | filter:stage.query"></li>

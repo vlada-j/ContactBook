@@ -152,11 +152,24 @@
 .thm3 #SideMenu .item.active .text {background-color:#AE4736}
 .thm3 #CollapseMenuButton {color:#46ABE3;}
 
-.thm3 #Main {background-color:#989898}
+.thm3 #Main {}
+.thm3 .content .title {
+	color:#FFF;
+	padding:5px 10px;
+	margin:0 0 20px 0;
+	text-transform:uppercase;
+	background-color:#46ABE3}
 .thm3 #Result {}
-.thm3 #Result .item {}
+.thm3 #Result .item {background-color:#ED6454}
 
 .thm3 #Details {background-color:#46ABE3}
+.thm3 #Details .title {
+	color:#FFF;
+	padding:5px 10px;
+	font-weight:bold;
+	text-transform:uppercase;
+	background-color:#3D4F63;
+}
 
 .thm3 form {}
 
