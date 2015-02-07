@@ -18,6 +18,10 @@
 .thm0 #Result .item {background-color:#510102}
 .thm0 #Details {background-color:#7D7D7D}
 /* *************************************************************************************** */
+
+
+
+/* Dark */
 .thm1 {background-color:#202024;color:#7D7D7D}
 
 .thm1 .btn,
@@ -49,17 +53,15 @@
 	border-top-color:#2E2E30;
 	border-left-color:#2E2E30;}
 .thm1 #Result > li.active {background-color:#2E2E34}
+/* *************************************************************************************** */
 
 
 
-
-
+/* Silky */
 .thm2 {
-	background:url(wood_wall.jpg) no-repeat center;
+	background:url(Silky/wood_wall.jpg) no-repeat center;
 	background-size:cover;}
 
- /*.thm2 .fa {font-size:30px;line-height:50px}*/
- /*.thm2 small.fa {font-size:20px;line-height:20px}*/
 .thm2 #Header {
 	z-index:1;
 	color:#303030;
@@ -78,18 +80,15 @@
 }
 .thm2 #Header {
 	border:none;
-	background: url(header.png) repeat-x;}
+	background: url(Silky/header.png) repeat-x;}
 .thm2 #Logo {float:left;border:none;text-shadow:none}
 .thm2 #Logo img {height:30px;margin:10px}
 .thm2 #Title {color:inherit}
 .thm2 #blue-line {
 	height:27px;
-	background:#047DEA url(blue_line.jpg) repeat-x;}
-
+	background:#047DEA url(Silky/blue_line.jpg) repeat-x;}
 
 .thm2 #SideMenu ul {margin-bottom:0}
-
-
 .thm2 #SideMenu {
 	width:62px;
 	border:none;
@@ -107,18 +106,18 @@
 	width:70px;
 	height:92px;
 	position:absolute;
-	background:url(sidemenu_bg_bottom.png) no-repeat;}
+	background:url(Silky/sidemenu_bg_bottom.png) no-repeat;}
 .thm2 #SideMenu .item {
 	color:#2A2A2A;
 	box-shadow:0 0 10px rgba(0,0,0,1);
-	background:url(sidemenu_bg.png);}
+	background:url(Silky/sidemenu_bg.png);}
 .thm2 #SideMenu .item .icon {
 	z-index:2;
 	width:70px;
 	color:gold;
 	padding-right:8px;
 	text-shadow:0 0 5px darkred;
-	background:url(sidemenu_bg_icon.png) no-repeat 0 0;}
+	background:url(Silky/sidemenu_bg_icon.png) no-repeat 0 0;}
 .thm2 #SideMenu .item .text {
 	right:0;
 	z-index:1;
@@ -133,7 +132,7 @@
 .thm2 #SideMenu .item.active {
 	color:#FFF;
 	z-index:1;
-	background:url(sidemenu_bg_active.png);}
+	background:url(Silky/sidemenu_bg_active.png);}
 .thm2 #SideMenu .item.active:after {
 	top:0;
 	content:'';
@@ -141,7 +140,7 @@
 	width:12px;
 	height:50px;
 	position:absolute;
-	background:url(sidemenu_bg_active.png) no-repeat right top;}
+	background:url(Silky/sidemenu_bg_active.png) no-repeat right top;}
 .thm2 #SideMenu .item.active .icon {
 	color:wheat;
 	background:none;
@@ -157,9 +156,13 @@
 	color:gold;
 	padding-right:8px;
 	text-shadow:0 0 5px darkred;
-	background:url(sidemenu_bg_icon.png) no-repeat left bottom;}
+	background:url(Silky/sidemenu_bg_icon.png) no-repeat left bottom;}
 .thm2 #CollapseMenuButton:hover {color:#FFF}
 /* *************************************************************************************** */
+
+
+
+/* Flat */
 .thm3 {background-color:#E5E5E5;color:#FFF}
 .thm3 #Header {background-color:#C1C1C1}
 .thm3 #Logo {color:#7E2F28}
