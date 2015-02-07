@@ -1,68 +1,45 @@
-/* Dev theme */
-.thm0 #Header {background-color:#4A4B50}
-.thm0 #Logo {background-color:#155A9B}
-.thm0 #AppOptions {background-color:#891215}
-.thm0 #Search {background-color:#3D3C46}
-.thm0 #Search input {}
-
-.thm0 #SideMenu {background-color:#155A9B}
-.thm0 #SideMenu .item {background-color:#36C}
-.thm0 #SideMenu .item .icon {background-color:#510102}
-.thm0 #SideMenu .item .text {background-color:#7D7D7D}
-.thm0 #SideMenu .item.active {background-color:#3D3C46}
-.thm0 #SideMenu .item.active .icon {background-color:#891215}
-.thm0 #CollapseMenuButton {background-color:#FF0}
-
-.thm0 #Main {box-shadow:inset 0 0 15px red}
-.thm0 #Result {background-color:rgba(255,255,0,.3)}
-.thm0 #Result .item {background-color:#510102}
-.thm0 #Details {background-color:#7D7D7D}
-/* *************************************************************************************** */
-
-
-
 /* Dark */
-.thm1 {background-color:#202024;color:#7D7D7D}
+.thmDark {background-color:#202024;color:#7D7D7D}
 
-.thm1 .btn,
-.thm1 .btn-block {
+.thmDark .btn,
+.thmDark .btn-block {
 	border:1px solid #0D0D0E;
 	border-top-color:#2E2E30;
 	border-left-color:#2E2E30;
 	background-color:#202024;
 	border-radius:0;}
-.thm1 .btn:hover, .thm1 .btn-block:hover,
-.thm1 .btn:active, .thm1 .btn-block:active {background-color:#2E2E34}
+.thmDark .btn:hover, .thmDark .btn-block:hover,
+.thmDark .btn:active, .thmDark .btn-block:active {background-color:#2E2E34}
 
-.thm1 #Header,
-.thm1 #SideMenu,
-.thm1 #Main,
-.thm1 #Details {
+.thmDark #Header,
+.thmDark #SideMenu,
+.thmDark #Main,
+.thmDark #Details {
 	border:1px solid #0D0D0E;
 	border-top-color:#2E2E30;
 	border-left-color:#2E2E30;
 	background-color:#202024}
-.thm1 #Search input[type="text"] {
+.thmDark #Search input[type="text"] {
 	color:#5D5D5D;
 	border:1px solid #0D0D0E;
 	border-right-color:#2E2E30;
 	border-bottom:none;
 	background-color:#000}
-.thm1 #Result > li {
+.thmDark #Result > li {
 	border:1px solid #0D0D0E;
 	border-top-color:#2E2E30;
 	border-left-color:#2E2E30;}
-.thm1 #Result > li.active {background-color:#2E2E34}
+.thmDark #Result > li.active {background-color:#2E2E34}
 /* *************************************************************************************** */
 
 
 
 /* Silky */
-.thm2 {
+.thmSilky {
 	background:url(Silky/wood_wall.jpg) no-repeat center;
 	background-size:cover;}
 
-.thm2 #Header {
+.thmSilky #Header {
 	z-index:1;
 	box-shadow:0 5px 15px rgba(0,0,0,.5);
 	background: url(Silky/header.png) repeat-x;
@@ -74,25 +51,20 @@
 	background:-ms-linear-gradient(top,  #3D3C46 0%,#2B2C33 100%);
 	background:linear-gradient(to bottom,  #3D3C46 0%,#2B2C33 100%);*/
 }
-.thm2 #Logo {
+.thmSilky #Logo {
 	float:left;
 	border:none;}
-.thm2 #Search input,
-.thm2 #Search button {
-	color:#666;
-	height:40px;
-	font-size:20px;}
-.thm2 #Search input {
-	margin:5px 0;
-	padding:10px;
+.thmSilky #Search {margin-left:62px}
+.thmSilky.sideMenuOpen #Search {margin-left:210px}
+.thmSilky #Search input,
+.thmSilky #Search button {color:#666;}
+.thmSilky #Search input {
 	border:1px solid #CCC;
 	box-shadow:inset 0 1px 3px #DDD;}
-.thm2 #Search button {
-	top:5px;
-	width:40px;
+.thmSilky #Search button {
 	border:none;
 	background:none;}
-.thm2 #AppOptions .pure-button {
+.thmSilky #AppOptions .pure-button {
 	margin:5px;
 	width:40px;
 	height:40px;
@@ -102,20 +74,20 @@
 	line-height:40px;
 	background:none;
 	text-shadow:none;}
-.thm2 #blue-line {
+.thmSilky #blue-line {
 	height:27px;
 	background:#047DEA url(Silky/blue_line.jpg) repeat-x;}
 
-.thm2 #SideMenu {
+.thmSilky #SideMenu {
 	width:62px;
 	border:none;
 	height:auto;
 	bottom:inherit;
 	overflow:visible;
 	background:none;}
-.thm2.sideMenuOpen #SideMenu {width:200px}
-.thm2.sideMenuOpen #SideMenu .item .text {}
-.thm2 #SideMenu:after {
+.thmSilky.sideMenuOpen #SideMenu {width:200px}
+.thmSilky.sideMenuOpen #SideMenu .item .text {}
+.thmSilky #SideMenu:after {
 	content:'';
 	left:0;
 	z-index:1;
@@ -124,17 +96,17 @@
 	height:92px;
 	position:absolute;
 	background:url(Silky/sidemenu_bg_bottom.png) no-repeat;}
-.thm2 #SideMenu .item {
+.thmSilky #SideMenu .item {
 	color:#2A2A2A;
 	background:url(Silky/sidemenu_bg.png);}
-.thm2 #SideMenu .item .icon {
+.thmSilky #SideMenu .item .icon {
 	z-index:2;
 	width:70px;
 	color:gold;
 	padding-right:8px;
 	text-shadow:0 0 5px darkred;
 	background:url(Silky/sidemenu_bg_icon.png) no-repeat 0 0;}
-.thm2 #SideMenu .item .text {
+.thmSilky #SideMenu .item .text {
 	right:0;
 	z-index:1;
 	width:100%;
@@ -143,14 +115,14 @@
 	position:absolute;
 	padding:0 5px 0 70px;
 	border-bottom:1px dotted #BABABA;}
-.thm2 #SideMenu .item:hover .icon {color:#FFF}
-.thm2 #SideMenu .item:hover .text {}
-.thm2 #SideMenu .item.active {
+.thmSilky #SideMenu .item:hover .icon {color:#FFF}
+.thmSilky #SideMenu .item:hover .text {}
+.thmSilky #SideMenu .item.active {
 	z-index:3;
 	color:#FFF;
 	box-shadow:0 0 10px rgba(0,0,0,1);
 	background:url(Silky/sidemenu_bg_active.png);}
-.thm2 #SideMenu .item.active:after {
+.thmSilky #SideMenu .item.active:after {
 	top:0;
 	content:'';
 	right:-12px;
@@ -158,34 +130,34 @@
 	height:50px;
 	position:absolute;
 	background:url(Silky/sidemenu_bg_active.png) no-repeat right top;}
-.thm2 #SideMenu .item.active .icon {
+.thmSilky #SideMenu .item.active .icon {
 	color:wheat;
 	background:none;
 	text-shadow:0 0 5px gold;}
-.thm2 #SideMenu .item.active .text {
+.thmSilky #SideMenu .item.active .text {
 	border:none;
 	padding-right:0;
 	font-weight:bold;
 	text-shadow:1px 1px 1px black;}
-.thm2 #CollapseMenuButton {
+.thmSilky #CollapseMenuButton {
 	z-index:1;
 	width:70px;
 	color:gold;
 	padding-right:8px;
 	text-shadow:0 0 5px darkred;
 	background:url(Silky/sidemenu_bg_icon.png) no-repeat left bottom;}
-.thm2 #CollapseMenuButton:hover {color:#FFF}
+.thmSilky #CollapseMenuButton:hover {color:#FFF}
 
-.thm2 #Main {left:62px}
-.thm2.sideMenuOpen #Main {left:200px}
-.thm2 .content {
+.thmSilky #Main {left:62px}
+.thmSilky.sideMenuOpen #Main {left:200px}
+.thmSilky .content {
 	color:#2A2A2A;
 	overflow:hidden;
 	border-radius:5px;
 	padding:0 20px 20px 20px;
 	box-shadow:0 0 10px black;
 	background:url(Silky/sidemenu_bg.png);}
-.thm2 .content .title {
+.thmSilky .content .title {
 	color:#444;
 	height:50px;
 	font-size:18px;
@@ -197,13 +169,13 @@
 	box-shadow:0 0 5px rgba(0,0,0,.3);
 	background:url(Silky/content_title.jpg);
 }
-.thm2 #Book {
+.thmSilky #Book {
 	padding:0;
 	border-radius:0;
 	box-shadow:none;
 	background:none}
 
-.thm2 .pure-button {
+.thmSilky .pure-button {
 	color:#FFF;
 	font-weight:bold;
 	border-radius:4px;
@@ -218,53 +190,54 @@
 
 
 /* Flat */
-.thm3 {background-color:#E5E5E5;color:#FFF}
-.thm3 #Header {background-color:#C1C1C1}
-.thm3 #Logo {color:#7E2F28}
-.thm3 #AppOptions {}
-.thm3 #Search {}
-.thm3 #Search input {
+.thmFlat {background-color:#E5E5E5;color:#FFF}
+.thmFlat #Header {background-color:#C1C1C1}
+.thmFlat #Logo {color:#7E2F28}
+.thmFlat #AppOptions {}
+.thmFlat #Search {}
+.thmFlat #Search input {
 	color:#AAA;
 	border:1px solid #C1C1C1;
 	background-color:#E5E5E5;}
-.thm3 #Search button {
+.thmFlat #Search button {
 	border:none;
 	background:none;}
 
-.thm3 #SideMenu {
+.thmFlat #SideMenu {
 	border:none;
 	background-color:#2C3E52}
-.thm3 #SideMenu .item {}
-.thm3 #SideMenu .item .icon {
+.thmFlat #SideMenu .item {}
+.thmFlat #SideMenu .item .icon {
 	background-color:#3D4F63}
-.thm3 #SideMenu .item .text {background-color:#ED6454}
-.thm3 #SideMenu .item:hover .icon {background-color:#4E5F74}
-.thm3 #SideMenu .item:hover .text {background-color:#FE7565}
-.thm3 #SideMenu .item.active .icon {background-color:#46ABE3}
-.thm3 #SideMenu .item.active .text {background-color:#AE4736}
-.thm3 #CollapseMenuButton {color:#46ABE3;}
+.thmFlat #SideMenu .item .text {background-color:#ED6454}
+.thmFlat #SideMenu .item:hover .icon {background-color:#4E5F74}
+.thmFlat #SideMenu .item:hover .text {background-color:#FE7565}
+.thmFlat #SideMenu .item.active .icon {background-color:#46ABE3}
+.thmFlat #SideMenu .item.active .text {background-color:#AE4736}
+.thmFlat #CollapseMenuButton {color:#46ABE3;}
 
-.thm3 #Main {}
-.thm3 .content .title {
+.thmFlat #Main {}
+.thmFlat .content {color:#2A2A2A;}
+.thmFlat .content .title {
 	color:#FFF;
 	padding:5px 10px;
 	margin:0 0 20px 0;
 	text-transform:uppercase;
 	background-color:#46ABE3}
-.thm3 #Result {}
-.thm3 #Result .item {background-color:#ED6454}
+.thmFlat #Result {}
+.thmFlat #Result .item {background-color:#ED6454}
 
-.thm3 #Details {background-color:#46ABE3}
-.thm3 #Details .title,
-.thm3 #Details .subTitle {
+.thmFlat #Details {background-color:#46ABE3}
+.thmFlat #Details .title,
+.thmFlat #Details .subTitle {
 	color:#FFF;
 	padding:5px 10px;
 	font-weight:bold;
 	text-transform:uppercase;
 	background-color:#3D4F63;}
-.thm3 #Details .subTitle {margin:15px 0 5px 0;}
+.thmFlat #Details .subTitle {margin:15px 0 5px 0;}
 
-.thm3 form {}
+.thmFlat form {}
 
 .input,.textarea {
 	color:#AAA;
