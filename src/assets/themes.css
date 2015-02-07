@@ -88,7 +88,6 @@
 	height:27px;
 	background:#047DEA url(Silky/blue_line.jpg) repeat-x;}
 
-.thm2 #SideMenu ul {margin-bottom:0}
 .thm2 #SideMenu {
 	width:62px;
 	border:none;
@@ -109,7 +108,6 @@
 	background:url(Silky/sidemenu_bg_bottom.png) no-repeat;}
 .thm2 #SideMenu .item {
 	color:#2A2A2A;
-	box-shadow:0 0 10px rgba(0,0,0,1);
 	background:url(Silky/sidemenu_bg.png);}
 .thm2 #SideMenu .item .icon {
 	z-index:2;
@@ -130,8 +128,9 @@
 .thm2 #SideMenu .item:hover .icon {color:#FFF}
 .thm2 #SideMenu .item:hover .text {}
 .thm2 #SideMenu .item.active {
+	z-index:3;
 	color:#FFF;
-	z-index:1;
+	box-shadow:0 0 10px rgba(0,0,0,1);
 	background:url(Silky/sidemenu_bg_active.png);}
 .thm2 #SideMenu .item.active:after {
 	top:0;
@@ -158,6 +157,33 @@
 	text-shadow:0 0 5px darkred;
 	background:url(Silky/sidemenu_bg_icon.png) no-repeat left bottom;}
 .thm2 #CollapseMenuButton:hover {color:#FFF}
+
+.thm2 #Main {left:62px}
+.thm2.sideMenuOpen #Main {left:200px}
+.thm2 .content {
+	color:#2A2A2A;
+	overflow:hidden;
+	border-radius:5px;
+	padding:0 20px 20px 20px;
+	box-shadow:0 0 10px black;
+	background:url(Silky/sidemenu_bg.png);}
+.thm2 .content .title {
+	color:#444;
+	height:50px;
+	font-size:18px;
+	font-weight:bold;
+	text-shadow:-1px -1px 0 #CCC;
+	padding:15px 20px;
+	margin:0 -20px 20px -20px;
+	border-bottom:1px solid #BCBCBC;
+	box-shadow:0 0 5px rgba(0,0,0,.3);
+	background:url(Silky/content_title.jpg);
+}
+.thm2 #Book {
+	padding:0;
+	border-radius:0;
+	box-shadow:none;
+	background:none}
 /* *************************************************************************************** */
 
 
