@@ -185,45 +185,41 @@ input.ng-valid {border: 1px solid green;}
 	margin:0;
 	width:100%;
 	overflow:auto}
-#Result > li {
+#Result .bookItem {
 	float:left;
 	width:33.333%;
 	height:75px;
 	padding:15px 20px;
 	overflow:hidden;
 	-webkit-transition:all .2s ease-in-out;
-	-moz-transition:all .2s ease-in-out;
-	-o-transition:all .2s ease-in-out;
-	transition:all .2s ease-in-out;}
-/*#Result > li:nth-child(odd) {border-left:none}*/
-#Result > li:nth-child(3n+1) {border-left:none}
-
-#Result > li.active {}
-#Result > li .fa {
+	        transition:all .2s ease-in-out;}
+#Result .bookItem.active {}
+#Result .bookItem .fa {
 	float:right;
 	font-size:20px;
 	line-height:45px;}
-#Result > li .fa.fa-star {color:gold}
-#Result > li > div {
+#Result .bookItem .fa.fa-star {color:gold}
+#Result .bookItem > div {
 	height:45px;
 	font-size:16px;
 	overflow:hidden;
 	white-space:nowrap;
 	margin:0 30px 0 0}
-#Result > li > div strong {
+#Result .bookItem > div strong {
 	height:20px;
 	display:block;
 	line-height:100%;
 	margin-bottom:0px}
-#Result > li ul {
+#Result .bookItem ul {
 	margin:0;
 	width:auto;
 	height:20px;
 	display:inline-block}
-#Result > li ul li {
+#Result .bookItem ul li {
 	display:inline-block;
 	line-height:100%;
 	margin:0 10px 0 0}
+
 #Details {
 	top:0;
 	right:-300px;

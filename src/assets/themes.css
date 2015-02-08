@@ -74,8 +74,8 @@
 	line-height:40px;
 	background:none;
 	text-shadow:none;}
-.thmSilky #blue-line {
-	height:27px;
+.thmSilky .blue-line {
+	height:26px;
 	background:#047DEA url(Silky/blue_line.jpg) repeat-x;}
 
 .thmSilky #SideMenu {
@@ -156,7 +156,7 @@
 	border-radius:5px;
 	padding:0 20px 20px 20px;
 	box-shadow:0 0 10px black;
-	background:url(Silky/sidemenu_bg.png);}
+	background:url(Silky/paper.png);}
 .thmSilky .content .title {
 	color:#444;
 	height:50px;
@@ -167,13 +167,19 @@
 	margin:0 -20px 20px -20px;
 	border-bottom:1px solid #BCBCBC;
 	box-shadow:0 0 5px rgba(0,0,0,.3);
-	background:url(Silky/content_title.jpg);
+	background:url(Silky/blue_line.jpg);
+	background-image:-webkit-linear-gradient(top, #FDFDFD, #E2E2E2);
+	background-image:        linear-gradient(top, #FDFDFD, #E2E2E2);
 }
 .thmSilky #Book {
 	padding:0;
 	border-radius:0;
 	box-shadow:none;
 	background:none}
+
+.thmSilky #Result .bookItem {
+	background:url(Silky/item.png);
+	background-size:100% 100%;}
 
 .thmSilky .pure-button {
 	color:#FFF;
