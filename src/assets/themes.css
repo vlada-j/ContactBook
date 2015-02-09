@@ -178,6 +178,8 @@
 	background:none}
 
 .thmSilky #Result .bookItem {
+	width:31.333%;
+	margin:5px 1%;
 	background:url(Silky/item.png);
 	background-size:100% 100%;}
 
@@ -223,17 +225,20 @@
 .thmFlat #CollapseMenuButton {color:#46ABE3;}
 
 .thmFlat #Main {}
-.thmFlat .content {color:#2A2A2A;}
+.thmFlat .content {color:#2A2A2A}
 .thmFlat .content .title {
 	color:#FFF;
 	padding:5px 10px;
-	margin:0 0 20px 0;
 	text-transform:uppercase;
 	background-color:#46ABE3}
 .thmFlat #Result {}
-.thmFlat #Result .item {background-color:#ED6454}
+.thmFlat #Result .item {
+	width:31.333%;
+	margin:5px 1%;
+	background-color:#ED6454}
 
 .thmFlat #Details {background-color:#46ABE3}
+.thmFlat #Details .content {margin:10px 20px}
 .thmFlat #Details .title,
 .thmFlat #Details .subTitle {
 	color:#FFF;
@@ -241,7 +246,7 @@
 	font-weight:bold;
 	text-transform:uppercase;
 	background-color:#3D4F63;}
-.thmFlat #Details .subTitle {margin:15px 0 5px 0;}
+.thmFlat #Details .subTitle {margin:15px -20px 5px -20px;}
 
 .thmFlat form {}
 
