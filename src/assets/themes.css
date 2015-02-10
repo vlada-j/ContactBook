@@ -167,7 +167,7 @@
 	margin:0 -20px 20px -20px;
 	border-bottom:1px solid #BCBCBC;
 	box-shadow:0 0 5px rgba(0,0,0,.3);
-	background:url(Silky/blue_line.jpg);
+	/*background:url(Silky/blue_line.jpg);*/
 	background-image:-webkit-linear-gradient(top, #FDFDFD, #E2E2E2);
 	background-image:        linear-gradient(top, #FDFDFD, #E2E2E2);
 }
@@ -182,6 +182,25 @@
 	margin:5px 1%;
 	background:url(Silky/item.png);
 	background-size:100% 100%;}
+
+.thmSilky #Details {background:url(Silky/paper.png)}
+.thmSilky #Details .content {
+	margin:20px 0;
+	background:none;
+	box-shadow:none}
+.thmSilky #Details .title,
+.thmSilky #Details .subTitle {
+	font-weight:bold;
+	text-transform:uppercase;
+	background-image:-webkit-linear-gradient(top, #FDFDFD, #E2E2E2);
+	background-image:        linear-gradient(top, #FDFDFD, #E2E2E2);}
+.thmSilky #Details .subTitle {
+	color:#FFF;
+	height:26px;
+	padding:5px 10px;
+	margin:15px -20px 5px -20px;
+	box-shadow:0 2px 5px rgba(0,0,0,.3);
+	background:url(Silky/blue_line.jpg) repeat-x 0 0;}
 
 .thmSilky .pure-button {
 	color:#FFF;
@@ -237,7 +256,7 @@
 	margin:5px 1%;
 	background-color:#ED6454}
 
-.thmFlat #Details {background-color:#46ABE3}
+.thmFlat #Details {background-color:#C1C1C1}
 .thmFlat #Details .content {margin:10px 20px}
 .thmFlat #Details .title,
 .thmFlat #Details .subTitle {
