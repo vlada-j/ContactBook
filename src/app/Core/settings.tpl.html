@@ -1,14 +1,33 @@
 <div id="Settings" class="content">
 	<h2 class="title">Settings</h2>
 	<form class="pure-form">
-			<label class="pure-radio"><input type="radio" name="them" value="thmDark" ng-model="stage.thm"/> Dark theme</label>
-			<label class="pure-radio"><input type="radio" name="them" value="thmSilky" ng-model="stage.thm"/> Silky theme</label>
-			<label class="pure-radio"><input type="radio" name="them" value="thmFlat" ng-model="stage.thm"/> Flat theme</label>
-		<input type="checkbox" ng-model="stage.sideMenuOpen"/>
-		<textarea ng-model="vm.db" readonly style="width:500px" rows="10"></textarea>
-		<textarea ng-model="vm.newdb" style="width:500px" rows="10"></textarea>
-		<button ng-click="vm.save()" class="pure-button pure-button-primary">SET</button>
+		<fieldset class="pure-form-aligned">
+			<div class="pure-control-group">
+				<label>Chose theme:</label>
+				<select name="theme" data-ng-model="stage.thm">
+					<option value="thmDark">Dark theme</option>
+					<option value="thmSilky">Silky theme</option>
+					<option value="thmFlat">Flat theme</option>
+				</select>
+			</div>
+
+			<div class="pure-controls">
+				<label class="pure-checkbox">
+					<input type="checkbox" ng-model="stage.sideMenuOpen"/> Open side menu
+				</label>
+			</div>
+		</fieldset>
+
+		<fieldset class="pure-form pure-form-stacked">
+			<label>Current:</label>
+			<textarea class="pure-input-1" ng-model="vm.db" readonly></textarea>
+			<label>New:</label>
+			<textarea class="pure-input-1" ng-model="vm.newdb"></textarea>
+			<button ng-click="vm.save()" class="pure-button pure-button-primary">SET</button>
+		</fieldset>
 	</form>
+
+	<div class="blue-line"></div>
 
 	<form class="pure-form">
 		<fieldset>
