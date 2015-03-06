@@ -224,8 +224,7 @@
 	border:none;
 	background-color:#2C3E52}
 .thmFlat #SideMenu .item {}
-.thmFlat #SideMenu .item .icon {
-	background-color:#3D4F63}
+.thmFlat #SideMenu .item .icon {background-color:#3D4F63}
 .thmFlat #SideMenu .item .text {background-color:#ED6454}
 .thmFlat #SideMenu .item:hover .icon {background-color:#4E5F74}
 .thmFlat #SideMenu .item:hover .text {background-color:#FE7565}
@@ -271,18 +270,3 @@
 	text-transform:uppercase;
 	text-shadow:0 0 2px black;
 	background-color:#3D4F63}
-
-/*
-#E5E5E5
-#C1C1C1
-#BEBEBE
-#989898
-
-#3D4F63
-#46ABE3
-#AAE4F8
-
-#7E2F28
-#AE4736
-#ED6454
-*/
