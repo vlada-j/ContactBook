@@ -175,13 +175,22 @@
 	background-size:100% 100%;}
 
 .thmSilky #Details {background:url(Silky/paper.png)}
-.thmSilky .avatar {padding:20px}
+.thmSilky #Details .avatar {
+	padding:20px;
+	border-bottom:1px solid #DDD;
+	background-color:rgba(255,255,255,.6);}
+.thmSilky #Details .avatar figcaption {padding-top:15px}
 .thmSilky #Details .avatar header {font-size:1.5em}
 .thmSilky #Details .avatar small {font-size:80%}
+.thmSilky #Details .avatar img {
+	border-radius:5px;
+	border:1px solid #BBB;
+	background-color:rgba(200,200,200,.3);}
 .thmSilky #Details .content {
 	margin:20px 0;
 	background:none;
 	box-shadow:none}
+.thmSilky #Details .content label {text-align:right;padding-right:10px}
 .thmSilky #Details .title,
 .thmSilky #Details .subTitle {
 	font-weight:bold;
