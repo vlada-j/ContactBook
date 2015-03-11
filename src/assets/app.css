@@ -229,6 +229,11 @@ input.ng-valid {border: 1px solid green;}
 	border-top:none;
 	position:absolute;}
 #Details .title {margin:0;}
+#Details .avatar {display:block;overflow:auto}
+#Details .avatar figcaption {display:inline-block}
+#Details .avatar header {}
+#Details .avatar small {}
+#Details .avatar img {float:right}
 #Details .content {height:auto}
 #Details > [ui-view] {position:absolute;width:100%;height:100%}
 #Details > [ui-view].ng-enter, #Details > [ui-view].ng-leave.ng-leave-active {opacity:0}

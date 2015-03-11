@@ -13,5 +13,9 @@ detailsCtrl.$inject = ['DataBase', '$scope', '$stateParams'];
 function detailsCtrl( DataBase, $scope, $stateParams ) {
 	$scope.bookView.detailsOpen = true;
 	$scope.bookView.activeId = $stateParams.id;
+	$scope.contact = {
+		firstName:'First',
+		lastName:'Last'
+	};
 }
 })();
