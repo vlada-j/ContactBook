@@ -10,23 +10,13 @@ angular
 
 //**************************************************************************************************
 
-bookConfig.$inject = [ '$stateProvider', '$urlRouterProvider' ];
+bookConfig.$inject = [ '$routeProvider', '$locationProvider' ];
 
-function bookConfig ( $stateProvider, $urlRouterProvider ) {
-	$urlRouterProvider.otherwise('/');
-
-	$stateProvider
-		.state ('search', {
-			url: '/',
-			templateUrl: 'app/Book/book.tpl.html',
-			controller: 'bookCtrl',
-			controllerAs: 'bookView'
-		})
-		.state ('search.details', {
-			url:'{id:[A-Z]{10,}}',
-			templateUrl: 'app/Book/Details/details.tpl.html',
-			controller: 'detailsCtrl'
-		});
+function bookConfig ( $routeProvider, $locationProvider ) {
+	$routeProvider
+		.when('/',					{ templateUrl:'app/Book/book.tpl.html', controller:'bookCtrl', controllerAs:'bookView' })
+		.when('/{id:[A-Z]{10,}}',	{ templateUrl:'app/Book/Details/details.tpl.html', controller:'detailsCtrl' });
+	$routeProvider.otherwise('/');
 }
 
 //**************************************************************************************************

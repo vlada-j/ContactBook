@@ -10,21 +10,15 @@ angular
 //**************************************************************************************************
 // Config and routing
 //**************************************************************************************************
-Config.$inject = ['$stateProvider', '$urlRouterProvider'];
+Config.$inject = ['$routeProvider', '$locationProvider'];
 
-function Config( $stateProvider, $urlRouterProvider) {
-	$urlRouterProvider.otherwise('/');
-	$stateProvider
-		.state('about', {
-			url:'/about',
-			templateUrl:'app/Core/about.tpl.html'
-		})
-		.state('settings', {
-			url:'/settings',
-			templateUrl:'app/Core/settings.tpl.html',
-			controller:'settingsCtrl',
-			controllerAs:'vm'
-		});
+function Config($routeProvider, $locationProvider) {
+	$routeProvider
+		.when('/about',			{ templateUrl:'app/Core/about.tpl.html' })
+		.when('/settings',		{ templateUrl:'app/Core/settings.tpl.html', controller:'settingsCtrl', controllerAs:'vm' });
+	$routeProvider.otherwise('/');
+
+//	$locationProvider.html5Mode(true);
 }
 
 
