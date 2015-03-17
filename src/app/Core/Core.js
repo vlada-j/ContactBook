@@ -10,12 +10,17 @@ angular
 //**************************************************************************************************
 // Config and routing
 //**************************************************************************************************
-Config.$inject = ['$routeProvider', '$locationProvider'];
+Config.$inject = ['$router'];
 
-function Config($routeProvider, $locationProvider) {
-	$routeProvider
+function Config($router) {
+	$router.config([
+	//	{ path: '/',			redirectTo: '/welcome' },
+		{ path: '/about',		templateUrl:'app/Core/about.tpl.html' },
+		{ path: '/settings',	templateUrl:'app/Core/settings.tpl.html', controller:'settingsCtrl', controllerAs:'vm' }
+	]);
+/*	$routeProvider
 		.when('/about',			{ templateUrl:'app/Core/about.tpl.html' })
-		.when('/settings',		{ templateUrl:'app/Core/settings.tpl.html', controller:'settingsCtrl', controllerAs:'vm' });
+		.when('/settings',		{ templateUrl:'app/Core/settings.tpl.html', controller:'settingsCtrl', controllerAs:'vm' });*/
 //	$routeProvider.otherwise('/');
 
 //	$locationProvider.html5Mode(true);
