@@ -16,7 +16,7 @@ function Config($routeProvider, $locationProvider) {
 	$routeProvider
 		.when('/about',			{ templateUrl:'app/Core/about.tpl.html' })
 		.when('/settings',		{ templateUrl:'app/Core/settings.tpl.html', controller:'settingsCtrl', controllerAs:'vm' });
-	$routeProvider.otherwise('/');
+//	$routeProvider.otherwise('/');
 
 //	$locationProvider.html5Mode(true);
 }

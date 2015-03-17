@@ -16,7 +16,7 @@ function bookConfig ( $routeProvider, $locationProvider ) {
 	$routeProvider
 		.when('/',					{ templateUrl:'app/Book/book.tpl.html', controller:'bookCtrl', controllerAs:'bookView' })
 		.when('/{id:[A-Z]{10,}}',	{ templateUrl:'app/Book/Details/details.tpl.html', controller:'detailsCtrl' });
-	$routeProvider.otherwise('/');
+//	$routeProvider.otherwise('/');
 }
 
 //**************************************************************************************************
@@ -37,9 +37,9 @@ bookList.prototype.demarkAllItems = function() {
 
 //**************************************************************************************************
 
-bookCtrl.$inject = [ 'DataBase', '$scope', '$state', 'bookList' ];
+bookCtrl.$inject = [ 'DataBase', '$scope', '$location', 'bookList' ];
 
-function bookCtrl ( DataBase, $scope, $state, bookList ) {
+function bookCtrl ( DataBase, $scope, $location, bookList ) {
 	var bookView = this;
 	bookView.db = DataBase.getData();
 	bookView.detailsOpen = false;
@@ -48,14 +48,14 @@ function bookCtrl ( DataBase, $scope, $state, bookList ) {
 		bookList.demarkAllItems();
 		console.log(bookView.db.indexOf(nn));
 		bookList.markItem(nn.id);
-		$state.go('search.details', {id:nn.id});
+	//	$state.go('search.details', {id:nn.id});
 	};
 
-	$scope.$on('$stateChangeSuccess', function() {
+/*	$scope.$on('$stateChangeSuccess', function() {
 		bookView.activeId = '';
 		bookView.detailsOpen = false;
 		bookList.demarkAllItems();
-	});
+	});*/
 }
 
 //**************************************************************************************************
