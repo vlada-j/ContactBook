@@ -9,7 +9,7 @@
 
 angular
 	.module('App', [
-		'ngRoute',
+		'ngNewRouter',
 		'ngAnimate',
 
 		'App.DataBase',
