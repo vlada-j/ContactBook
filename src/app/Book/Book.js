@@ -3,19 +3,23 @@
 
 angular
 	.module('App.Book', [])
-	.config(bookConfig)
+//	.config(bookConfig)
 	.service('bookList', bookList)
 	.controller('bookCtrl', bookCtrl)
 	.directive('bookItem', bookItem);
 
 //**************************************************************************************************
 
-bookConfig.$inject = [ '$routeProvider', '$locationProvider' ];
+//bookConfig.$inject = [ '$router' ];
 
-function bookConfig ( $routeProvider, $locationProvider ) {
-	$routeProvider
+function bookConfig ( $router ) {
+	$router.config([
+//		{ path: '/',				templateUrl:'app/Book/book.tpl.html', controller:'bookCtrl', controllerAs:'bookView' },
+//		{ path: '/{id:[A-Z]{10,}}',	templateUrl:'app/Book/Details/details.tpl.html', controller:'detailsCtrl' }
+	]);
+/*	$routeProvider
 		.when('/',					{ templateUrl:'app/Book/book.tpl.html', controller:'bookCtrl', controllerAs:'bookView' })
-		.when('/{id:[A-Z]{10,}}',	{ templateUrl:'app/Book/Details/details.tpl.html', controller:'detailsCtrl' });
+		.when('/{id:[A-Z]{10,}}',	{ templateUrl:'app/Book/Details/details.tpl.html', controller:'detailsCtrl' });*/
 //	$routeProvider.otherwise('/');
 }
 

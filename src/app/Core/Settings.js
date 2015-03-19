@@ -3,14 +3,14 @@
 
 angular
 	.module('App.Core')
-	.controller('settingsCtrl', settingsCtrl);
+	.controller('SettingsController', SettingsController);
 
 
 //**************************************************************************************************
 
-settingsCtrl.$inject = ['DataBase'];
+SettingsController.$inject = ['DataBase'];
 
-function settingsCtrl( DataBase ) {
+function SettingsController( DataBase ) {
 	var vm = this;
 	console.log('Settings-CTRL', typeof DataBase);
 	vm.db = angular.toJson( DataBase.getData() );

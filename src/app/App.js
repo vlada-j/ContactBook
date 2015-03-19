@@ -9,8 +9,8 @@
 
 angular
 	.module('App', [
-		'ngNewRouter',
 		'ngAnimate',
+		'ngNewRouter',
 
 		'App.DataBase',
 		'App.Core',

@@ -10,7 +10,7 @@ angular
 
 detailsCtrl.$inject = ['DataBase', '$scope', '$routeParams'];
 
-function detailsCtrl( DataBase, $scope, $location ) {
+function detailsCtrl( DataBase, $scope, $routeParams ) {
 	$scope.bookView.detailsOpen = true;
 	$scope.bookView.activeId = $routeParams.id;
 	$scope.contact = {

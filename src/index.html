@@ -8,7 +8,7 @@
 	<link rel="stylesheet" href="assets/app.css"/>
 	<link rel="stylesheet" href="assets/themes.css"/>
 	<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
-	<base href="/ContactBook/">
+	<base href="/ContactBook/index.html">
 </head>
 
 
@@ -23,7 +23,9 @@
 	<nav id="SideMenu" class="pure-menu pure-menu-open" ng-include="'app/Core/sidemenu.tpl.html'"></nav>
 
 	<section id="Main">
-		<ng-viewport></ng-viewport>
+		<a class="pure-button fa fa-gear" href="#/settings"></a>
+		<a class="pure-button" href="#/about">?</a>
+		<div ng-viewport></div>
 	</section>
 
 	<div id="Notification"></div>
