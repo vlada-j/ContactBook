@@ -1,4 +1,8 @@
 /* Dark */
+.thmDark ::-webkit-scrollbar {background-color:#0D0D0E;}
+.thmDark ::-webkit-scrollbar-thumb {background-color:#7D7D7D;}
+.thmDark ::-webkit-scrollbar-thumb:hover {background-color:#8D8D8D;}
+
 .thmDark {background-color:#202024;color:#7D7D7D}
 
 .thmDark .btn,
@@ -35,6 +39,10 @@
 
 
 /* Silky */
+.thmSilky ::-webkit-scrollbar {background-color:#999;}
+.thmSilky ::-webkit-scrollbar-thumb {background-color:#047DEA;}
+.thmSilky ::-webkit-scrollbar-thumb:hover {background-color:#1978C8;}
+
 .thmSilky {
 	background:url(Silky/wood_wall.jpg) no-repeat center;
 	background-size:cover;}
@@ -219,6 +227,9 @@
 
 
 /* Flat */
+.thmFlat ::-webkit-scrollbar {background-color:#3D4F63;}
+.thmFlat ::-webkit-scrollbar-thumb {background-color:#AE4736;}
+.thmFlat ::-webkit-scrollbar-thumb:hover {background-color:#FE7565;}
 .thmFlat {background-color:#E5E5E5;color:#FFF}
 .thmFlat #Header {background-color:#C1C1C1}
 .thmFlat #Logo {color:#7E2F28}
