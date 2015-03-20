@@ -36,8 +36,9 @@ function AppCtrl($router, $rootScope, DataBase) {
 
 	$router.config([
 	//		{ path: '/',			redirectTo: '/about' },
-			{ path: '/about',		components: 'about' },
-			{ path: '/settings',	components: 'settings' }
+			{ path: '/about',		components: {'main':'about'} },
+			{ path: '/settings',	components: {'main':'settings'} },
+			{ path: '/search',		components: {'main':'search'} }
 	]);
 
 
