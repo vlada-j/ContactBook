@@ -4,7 +4,7 @@
 angular
 	.module('App.Book', [])
 	.config(bookConfig)
-	.service('bookList', bookList)
+	.service('BookList', BookList)
 	.controller('bookCtrl', bookCtrl)
 	.directive('bookItem', bookItem);
 
@@ -31,46 +31,46 @@ function bookConfig ( $stateProvider, $urlRouterProvider ) {
 
 //**************************************************************************************************
 
-bookList.$inject = ['DataBase'];
+BookList.$inject = ['DataBase'];
 
-function bookList (DataBase) {
+function BookList (DataBase) {
 	this.db = DataBase.getData();
 }
 
-bookList.prototype.markItem = function(n) {
+BookList.prototype.markItem = function(n) {
 	// Add "active" only on this item
 };
 
-bookList.prototype.demarkAllItems = function() {
+BookList.prototype.demarkAllItems = function() {
 	// Clear "active" from all items
 };
 
 //**************************************************************************************************
 
-bookCtrl.$inject = [ 'DataBase', '$scope', '$state', 'bookList' ];
+bookCtrl.$inject = [ 'DataBase', '$scope', '$state', 'BookList' ];
 
-function bookCtrl ( DataBase, $scope, $state, bookList ) {
+function bookCtrl ( DataBase, $scope, $state, BookList ) {
 	var bookView = this;
 	bookView.db = DataBase.getData();
 	bookView.detailsOpen = false;
 	bookView.activeId = '';
 	bookView.open = function(nn){
-		bookList.demarkAllItems();
+		BookList.demarkAllItems();
 		console.log(bookView.db.indexOf(nn));
-		bookList.markItem(nn.id);
+		BookList.markItem(nn.id);
 		$state.go('search.details', {id:nn.id});
 	};
 
 	$scope.$on('$stateChangeSuccess', function() {
 		bookView.activeId = '';
 		bookView.detailsOpen = false;
-		bookList.demarkAllItems();
+		BookList.demarkAllItems();
 	});
 }
 
 //**************************************************************************************************
 
-	bookItem.$inject = [ ];
+bookItem.$inject = [ ];
 
 function bookItem () {
 	return {

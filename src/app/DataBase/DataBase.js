@@ -100,7 +100,7 @@ DataBase.prototype.save = function() {
 DataBase.prototype.getContact = function(id) {
 	if(typeof id === 'string' && id !== '') {
 		var i = this.indexOfID(id);
-		if(i > 0) { return angular.copy(this.data[i]); }
+		if(i >= 0) { return angular.copy(this.data[i]); }
 	}
 	return null;
 };
@@ -143,12 +143,12 @@ DataBase.prototype.removeContact = function(o) {
 
 // Get contact by ID
 DataBase.prototype.indexOfID = function(id) {
-	angular.forEach(
-		this.data,
-		function(item, i) {
-			if (item.id === id) { return i;}
-		}
-	);
+	var d = this.data,
+		len = d.length,
+		i = 0;
+	for(i=0; i<len; i++) {
+		if (d[i].id === id) { return i; }
+	}
 	return -1;
 };
 
