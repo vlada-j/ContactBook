@@ -98,7 +98,9 @@
 	background:url(Silky/sidemenu_bg_bottom.png) no-repeat;}
 .thmSilky #SideMenu .item {
 	color:#2A2A2A;
+	border-right:2px solid #BABABA;
 	background:url(Silky/sidemenu_bg.png);}
+.thmSilky #SideMenu li:last-child .item {border-bottom:2px solid #BABABA;}
 .thmSilky #SideMenu .item .icon {
 	z-index:2;
 	width:70px;
@@ -160,7 +162,7 @@
 .thmSilky .content .title {
 	color:#444;
 	height:50px;
-	font-size:18px;
+	font-size:16px;
 	font-weight:bold;
 	text-shadow:-1px -1px 0 #CCC;
 	padding:15px 20px;
@@ -182,7 +184,9 @@
 	background:url(Silky/item.png);
 	background-size:100% 100%;}
 
-.thmSilky #Details {background:url(Silky/paper.png)}
+.thmSilky #Details {
+	border-left:1px solid #999;
+	background:url(Silky/paper.png)}
 .thmSilky #Details .avatar {
 	padding:20px;
 	border-bottom:1px solid #DDD;
@@ -212,6 +216,30 @@
 	margin:15px -20px 5px -20px;
 	box-shadow:0 2px 5px rgba(0,0,0,.3);
 	background:url(Silky/blue_line.jpg) repeat-x 0 0;}
+.thmSilky #Details .title .actions {
+	float:right;
+	margin:-15px -20px 0 0;}
+.thmSilky #Details .title .actions .pure-button {
+	margin:0;
+	float:left;
+	padding:0;
+	border:none;
+	border-radius:0;
+	width:50px;
+	line-height:49px;
+	font-size:18px;
+	color:#444;
+	text-shadow:none;
+	border-left:1px solid #BCBCBC;
+	background-color:#EEE;
+	background-image:-webkit-linear-gradient(top, #FDFDFD, #E2E2E2);
+	background-image:        linear-gradient(top, #FDFDFD, #E2E2E2);
+}
+.thmSilky #Details .title .actions .button-error {
+	color:#FFF;
+	background-color:#DF2831;
+	background-image:-webkit-linear-gradient(top, #EB8186, #930200);
+	background-image:        linear-gradient(top, #EB8186, #930200);}
 
 .thmSilky .pure-button {
 	color:#FFF;
