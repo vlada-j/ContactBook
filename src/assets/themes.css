@@ -216,9 +216,8 @@
 	margin:15px -20px 5px -20px;
 	box-shadow:0 2px 5px rgba(0,0,0,.3);
 	background:url(Silky/blue_line.jpg) repeat-x 0 0;}
-.thmSilky #Details .title .actions {
-	float:right;
-	margin:-15px -20px 0 0;}
+.thmSilky #Details .title {height:40px;}
+.thmSilky #Details .title .actions {margin:-15px -20px 0 0;}
 .thmSilky #Details .title .actions .pure-button {
 	margin:0;
 	float:left;
@@ -226,7 +225,7 @@
 	border:none;
 	border-radius:0;
 	width:50px;
-	line-height:49px;
+	line-height:39px;
 	font-size:18px;
 	color:#444;
 	text-shadow:none;
@@ -260,9 +259,16 @@
 .thmFlat ::-webkit-scrollbar-thumb:hover {background-color:#FE7565;}
 .thmFlat {background-color:#E5E5E5;color:#FFF}
 .thmFlat #Header {background-color:#C1C1C1}
-.thmFlat #Logo {color:#7E2F28}
+.thmFlat #Logo {color:#FFF;background-color:#ED6454}
+.thmFlat #Logo .text {
+	color:#FFF;
+	display:block;
+	margin-left:50px;
+	text-align:center;
+	background-color:#46ABE3;}
 .thmFlat #AppOptions {}
-.thmFlat #Search {}
+.thmFlat #Search {padding-left:5px}
+.thmFlat.sideMenuOpen #Search {margin-left:200px;}
 .thmFlat #Search input {
 	color:#AAA;
 	border:1px solid #C1C1C1;
@@ -274,7 +280,7 @@
 .thmFlat #SideMenu {
 	border:none;
 	background-color:#2C3E52}
-.thmFlat #SideMenu .item {}
+.thmFlat #SideMenu .item {color:#E5E5E5}
 .thmFlat #SideMenu .item .icon {background-color:#3D4F63}
 .thmFlat #SideMenu .item .text {background-color:#ED6454}
 .thmFlat #SideMenu .item:hover .icon {background-color:#4E5F74}
@@ -287,6 +293,7 @@
 .thmFlat .content {color:#2A2A2A}
 .thmFlat .content .title {
 	color:#FFF;
+	margin:0 0 20px 0;
 	padding:5px 10px;
 	text-transform:uppercase;
 	background-color:#46ABE3}
@@ -305,6 +312,23 @@
 	font-weight:bold;
 	text-transform:uppercase;
 	background-color:#3D4F63;}
+.thmFlat #Details .title {
+	padding:0;
+	height:40px;
+	font-size:18px;}
+.thmFlat #Details .title .actions {}
+.thmFlat #Details .title .actions .pure-button {
+	padding:0;
+	color:#FFF;
+	width:40px;
+	height:40px;
+	font-size:16px;
+	line-height:40px;
+	margin-left:1px;
+	background-color:#46ABE3;}
+.thmFlat #Details .title .actions .button-error {
+	color:#FFF;
+	background-color:#ED6454}
 .thmFlat #Details .subTitle {margin:15px -20px 5px -20px;}
 
 .thmFlat form {}

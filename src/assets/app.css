@@ -231,6 +231,8 @@ input.ng-valid {border: 1px solid green;}
 	border-top:none;
 	position:absolute;}
 #Details .title {margin:0;}
+#Details .title .actions {float:right}
+#Details .title .actions .pure-button {float:left}
 #Details .avatar {display:block;overflow:auto}
 #Details .avatar figcaption {display:inline-block}
 #Details .avatar header {}
