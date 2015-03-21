@@ -3,24 +3,30 @@
 
 angular
 	.module('App.Book', [])
-//	.config(bookConfig)
+	.config(bookConfig)
 	.service('bookList', bookList)
 	.controller('bookCtrl', bookCtrl)
 	.directive('bookItem', bookItem);
 
 //**************************************************************************************************
 
-//bookConfig.$inject = [ '$router' ];
+bookConfig.$inject = [ '$stateProvider', '$urlRouterProvider' ];
 
-function bookConfig ( $router ) {
-	$router.config([
-//		{ path: '/',				templateUrl:'app/Book/book.tpl.html', controller:'bookCtrl', controllerAs:'bookView' },
-//		{ path: '/{id:[A-Z]{10,}}',	templateUrl:'app/Book/Details/details.tpl.html', controller:'detailsCtrl' }
-	]);
-/*	$routeProvider
-		.when('/',					{ templateUrl:'app/Book/book.tpl.html', controller:'bookCtrl', controllerAs:'bookView' })
-		.when('/{id:[A-Z]{10,}}',	{ templateUrl:'app/Book/Details/details.tpl.html', controller:'detailsCtrl' });*/
-//	$routeProvider.otherwise('/');
+function bookConfig ( $stateProvider, $urlRouterProvider ) {
+	$urlRouterProvider.otherwise('/');
+
+	$stateProvider
+		.state ('search', {
+			url: '/',
+			templateUrl: 'app/Book/book.tpl.html',
+			controller: 'bookCtrl',
+			controllerAs: 'bookView'
+		})
+		.state ('search.details', {
+			url:'{id:[A-Z]{10,}}',
+			templateUrl: 'app/Book/Details/details.tpl.html',
+			controller: 'detailsCtrl'
+		});
 }
 
 //**************************************************************************************************
@@ -41,9 +47,9 @@ bookList.prototype.demarkAllItems = function() {
 
 //**************************************************************************************************
 
-bookCtrl.$inject = [ 'DataBase', '$scope', '$location', 'bookList' ];
+bookCtrl.$inject = [ 'DataBase', '$scope', '$state', 'bookList' ];
 
-function bookCtrl ( DataBase, $scope, $location, bookList ) {
+function bookCtrl ( DataBase, $scope, $state, bookList ) {
 	var bookView = this;
 	bookView.db = DataBase.getData();
 	bookView.detailsOpen = false;
@@ -52,14 +58,14 @@ function bookCtrl ( DataBase, $scope, $location, bookList ) {
 		bookList.demarkAllItems();
 		console.log(bookView.db.indexOf(nn));
 		bookList.markItem(nn.id);
-	//	$state.go('search.details', {id:nn.id});
+		$state.go('search.details', {id:nn.id});
 	};
 
-/*	$scope.$on('$stateChangeSuccess', function() {
+	$scope.$on('$stateChangeSuccess', function() {
 		bookView.activeId = '';
 		bookView.detailsOpen = false;
 		bookList.demarkAllItems();
-	});*/
+	});
 }
 
 //**************************************************************************************************

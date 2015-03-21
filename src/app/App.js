@@ -10,7 +10,7 @@
 angular
 	.module('App', [
 		'ngAnimate',
-		'ngNewRouter',
+		'ui.router',
 
 		'App.DataBase',
 		'App.Core',

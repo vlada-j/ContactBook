@@ -8,11 +8,11 @@ angular
 
 //**************************************************************************************************
 
-detailsCtrl.$inject = ['DataBase', '$scope', '$routeParams'];
+detailsCtrl.$inject = ['DataBase', '$scope', '$stateParams'];
 
-function detailsCtrl( DataBase, $scope, $routeParams ) {
+function detailsCtrl( DataBase, $scope, $stateParams ) {
 	$scope.bookView.detailsOpen = true;
-	$scope.bookView.activeId = $routeParams.id;
+	$scope.bookView.activeId = $stateParams.id;
 	$scope.contact = {
 		firstName:'First',
 		lastName:'Last'

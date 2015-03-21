@@ -8,7 +8,6 @@
 	<link rel="stylesheet" href="assets/app.css"/>
 	<link rel="stylesheet" href="assets/themes.css"/>
 	<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
-	<base href="http://localhost:63342/ContactBook/index.html">
 </head>
 
 
@@ -23,7 +22,7 @@
 	<nav id="SideMenu" class="pure-menu pure-menu-open" ng-include="'app/Core/sidemenu.tpl.html'"></nav>
 
 	<section id="Main">
-		<div ng-viewport="main"></div>
+		<div ui-view></div>
 	</section>
 
 	<div id="Notification"></div>
@@ -35,8 +34,7 @@
 
 	<script src="lib/angular.js"></script>
 	<script src="lib/angular-animate.js"></script>
-	<script src="lib/ng-new-router.js"></script>
-
+	<script src="lib/angular-ui-router.min.js"></script>
 	<script src="app/App.js"></script>
 	<script src="app/Core/Core.js"></script>
 	<script src="app/Core/Settings.js"></script>

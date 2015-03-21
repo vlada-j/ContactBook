@@ -4,44 +4,36 @@
 angular
 	.module('App.Core', [])
 	.config(Config)
-//	.controller('AboutController', AboutController)
 	.controller('AppCtrl', AppCtrl);
 
 
 //**************************************************************************************************
 // Config and routing
 //**************************************************************************************************
-Config.$inject = ['$componentLoaderProvider', '$locationProvider'];
+Config.$inject = ['$stateProvider', '$urlRouterProvider'];
 
-function Config($componentLoaderProvider, $locationProvider) {
-	$componentLoaderProvider.setTemplateMapping(function(name) { return 'app/Core/' + name + '.tpl.html'; });
-//	$componentLoaderProvider.setCtrlNameMapping(function(name) { return 'app/Core/component/about/' + name + '.js'; });
-//	$componentLoaderProvider.setComponentFromCtrlMapping;
-
-/*	$routeProvider
-		.when('/about',			{ templateUrl:'app/Core/about.tpl.html' })
-		.when('/settings',		{ templateUrl:'app/Core/settings.tpl.html', controller:'settingsCtrl', controllerAs:'vm' });*/
-//	$routeProvider.otherwise('/');
-
-//	$locationProvider.html5Mode(true);
+function Config( $stateProvider, $urlRouterProvider) {
+	$urlRouterProvider.otherwise('/');
+	$stateProvider
+		.state('about', {
+			url:'/about',
+			templateUrl:'app/Core/about.tpl.html'
+		})
+		.state('settings', {
+			url:'/settings',
+			templateUrl:'app/Core/settings.tpl.html',
+			controller:'settingsCtrl',
+			controllerAs:'vm'
+		});
 }
 
 
 //**************************************************************************************************
 // App main controller
 //**************************************************************************************************
-AppCtrl.$inject = ['$router', '$rootScope', 'DataBase'];
+AppCtrl.$inject = ['$rootScope', 'DataBase'];
 
-function AppCtrl($router, $rootScope, DataBase) {
-
-	$router.config([
-	//		{ path: '/',			redirectTo: '/about' },
-			{ path: '/about',		components: {'main':'about'} },
-			{ path: '/settings',	components: {'main':'settings'} },
-			{ path: '/search',		components: {'main':'search'} }
-	]);
-
-
+function AppCtrl($rootScope, DataBase) {
 	var stage = this;
 	stage.isLoaded = true;
 	stage.thm = 'thmSilky';
@@ -59,5 +51,3 @@ function AppCtrl($router, $rootScope, DataBase) {
 	//DataBase.save();
 }
 })();
-
-function AboutController() {}
