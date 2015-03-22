@@ -152,6 +152,7 @@
 
 .thmSilky #Main {left:62px}
 .thmSilky.sideMenuOpen #Main {left:200px}
+.thmSilky #Main > [ui-view] {padding:20px}
 .thmSilky .content {
 	color:#2A2A2A;
 	overflow:hidden;
@@ -290,18 +291,23 @@
 .thmFlat #CollapseMenuButton {color:#46ABE3;}
 
 .thmFlat #Main {}
-.thmFlat .content {color:#2A2A2A}
+.thmFlat .content {
+	padding:20px;
+	color:#2A2A2A;}
 .thmFlat .content .title {
 	color:#FFF;
 	margin:0 0 20px 0;
 	padding:5px 10px;
 	text-transform:uppercase;
 	background-color:#46ABE3}
-.thmFlat #Result {}
+.thmFlat #Book {padding:0}
+.thmFlat #Result {padding:4px}
 .thmFlat #Result .item {
-	width:31.333%;
-	margin:5px 1%;
-	background-color:#ED6454}
+	margin:0;
+	width:33.333%;
+	border:2px solid #E5E5E5;
+	background-color:#C1C1C1}
+.thmFlat #Result .item:hover {background-color:#CCC}
 
 .thmFlat #Details {background-color:#C1C1C1}
 .thmFlat #Details .content {margin:10px 20px}

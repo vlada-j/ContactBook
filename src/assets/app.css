@@ -178,7 +178,6 @@ input.ng-valid {border: 1px solid green;}
 	padding-right:0}
 #Main > [ui-view] {
 	height:100%;
-	padding:20px;
 	overflow:auto;}
 .content {}
 .content .title {}

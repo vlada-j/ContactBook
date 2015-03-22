@@ -90,8 +90,8 @@ function bookItem () {
 			d.middleName ? names.push(d.middleName) : 0;
 			d.lastName ? names.push(d.lastName) : 0;
 			d.nick ? names.push(d.nick) : 0;
-			d.phones ? contacts.concat(d.phones) : 0;
-			d.emails ? contacts.concat(d.emails) : 0;
+			d.phones ? contacts.push(d.phones.join(' ')) : 0;
+			d.emails ? contacts.push(d.emails.join(' ')) : 0;
 
 			scope.names = names.join(' ');
 			scope.contacts = contacts.join(' ');
