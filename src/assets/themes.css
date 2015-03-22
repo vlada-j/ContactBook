@@ -96,11 +96,19 @@
 	height:92px;
 	position:absolute;
 	background:url(Silky/sidemenu_bg_bottom.png) no-repeat;}
+.thmSilky #SideMenu ul:after {
+	content:'';
+	right:0;
+	z-index:1;
+	bottom:-6px;
+	width:100%;
+	height:6px;
+	position:absolute;
+	background:url(Silky/sidemenu_item_bottom.png) no-repeat right top;}
 .thmSilky #SideMenu .item {
-	color:#2A2A2A;
-	border-right:2px solid #BABABA;
-	background:url(Silky/sidemenu_bg.png);}
-.thmSilky #SideMenu li:last-child .item {border-bottom:2px solid #BABABA;}
+	color:#666;
+	border-right:1px solid #AFAFAF;
+	background-color:#F9F9F9;}
 .thmSilky #SideMenu .item .icon {
 	z-index:2;
 	width:70px;
@@ -113,10 +121,12 @@
 	z-index:1;
 	width:100%;
 	height:50px;
+	font-size:14px;
+	font-weight:bold;
 	overflow:hidden;
 	position:absolute;
 	padding:0 5px 0 70px;
-	border-bottom:1px dotted #BABABA;}
+	border-bottom:1px solid #B6DAFD;}
 .thmSilky #SideMenu .item:hover .icon {color:#FFF}
 .thmSilky #SideMenu .item:hover .text {}
 .thmSilky #SideMenu .item.active {
