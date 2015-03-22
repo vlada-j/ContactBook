@@ -196,8 +196,18 @@
 	background-size:100% 100%;}
 
 .thmSilky #Details {
+	top:15px;
+	bottom:15px;
+	border-radius:5px 0 0 5px;
 	border-left:1px solid #999;
+	box-shadow:0 0 15px rgba(0,0,0,.3);
 	background:url(Silky/paper.png)}
+.thmSilky #Details .content {
+	top:40px;
+	bottom:0;
+	padding:20px;
+	background:none;
+	box-shadow:none}
 .thmSilky #Details .avatar {
 	padding:20px;
 	border-bottom:1px solid #DDD;
@@ -209,10 +219,6 @@
 	border-radius:5px;
 	border:1px solid #BBB;
 	background-color:rgba(200,200,200,.3);}
-.thmSilky #Details .content {
-	margin:20px 0;
-	background:none;
-	box-shadow:none}
 .thmSilky #Details .content label {text-align:right;padding-right:10px}
 .thmSilky #Details .title,
 .thmSilky #Details .subTitle {
@@ -302,6 +308,8 @@
 
 .thmFlat #Main {}
 .thmFlat .content {
+	top:40px;
+	bottom:0;
 	padding:20px;
 	color:#2A2A2A;}
 .thmFlat .content .title {
