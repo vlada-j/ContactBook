@@ -334,7 +334,7 @@
 .thmFlat #Details .title,
 .thmFlat #Details .subTitle {
 	color:#FFF;
-	padding:5px 10px;
+	padding:10px;
 	font-weight:bold;
 	text-transform:uppercase;
 	background-color:#3D4F63;}
@@ -355,7 +355,9 @@
 .thmFlat #Details .title .actions .button-error {
 	color:#FFF;
 	background-color:#ED6454}
-.thmFlat #Details .subTitle {margin:5px 0}
+.thmFlat #Details .subTitle {
+	margin:0;
+	background-color:#ED6454;}
 
 .thmFlat form {}
 
