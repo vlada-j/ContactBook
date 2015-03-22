@@ -309,8 +309,10 @@
 	background-color:#C1C1C1}
 .thmFlat #Result .item:hover {background-color:#CCC}
 
-.thmFlat #Details {background-color:#C1C1C1}
-.thmFlat #Details .content {margin:10px 20px}
+.thmFlat #Details {background-color:#3D4F63;}
+.thmFlat #Details .content {color:#C1C1C1;padding:0}
+.thmFlat #Details .content .pure-g label {padding:7px 10px;background-color:#4E5F74;text-align:right}
+.thmFlat #Details .content .pure-g div {padding:7px 10px;background-color:#8E9FB4;color:#3D4F63}
 .thmFlat #Details .title,
 .thmFlat #Details .subTitle {
 	color:#FFF;
@@ -335,7 +337,7 @@
 .thmFlat #Details .title .actions .button-error {
 	color:#FFF;
 	background-color:#ED6454}
-.thmFlat #Details .subTitle {margin:15px -20px 5px -20px;}
+.thmFlat #Details .subTitle {margin:5px 0}
 
 .thmFlat form {}
 
