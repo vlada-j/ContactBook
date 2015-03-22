@@ -1,18 +1,63 @@
-<div id="NewContact" class="content">
-	<h2 class="title">Create new contact</h2>
+<h2 class="title">
+	Create new contact
+	<span class="actions">
+		<a class="button-error pure-button fa fa-times" ui-sref="search" href="#/"></a>
+	</span>
+</h2>
 
-	<form class="pure-form">
-		<fieldset class="pure-group">
-			<input type="text" class="pure-input-1-2" placeholder="Username">
-			<input type="text" class="pure-input-1-2" placeholder="Password">
-			<input type="email" class="pure-input-1-2" placeholder="Email">
+<article id="NewContact" class="content">
+
+	<form class="pure-form" name="newContactForm" novalidate>
+		<fieldset class="pure-form-aligned">
+			<legend>Info</legend>
+			<div class="pure-control-group">
+				<label for="firstname">First name</label>
+				<input id="firstname" type="text" placeholder="First name" name="firstName" ng-model="contact.firstName" ng-pattern="/[a-zA-Z0-9]{3,}/">
+			</div>
+
+			<div class="pure-control-group">
+				<label for="middlename">Middle name</label>
+				<input id="middlename" type="text" placeholder="Middle name" name="middleName" ng-model="contact.middleName" ng-pattern="/[a-zA-Z0-9]{3,}/">
+			</div>
+
+			<div class="pure-control-group">
+				<label for="lastname">Last name</label>
+				<input id="lastname" type="text" placeholder="Last name" name="lastName" ng-model="contact.lastName" ng-pattern="/[a-zA-Z0-9]{3,}/">
+			</div>
+
+			<div class="pure-control-group">
+				<label for="nick">Nick</label>
+				<input id="nick" type="text" placeholder="Nick" name="nick" ng-model="contact.nick" ng-pattern="/[a-zA-Z0-9]{3,}/">
+			</div>
+
+			<div class="pure-control-group">
+				<label for="address">Address</label>
+				<input id="address" type="text" placeholder="Address">
+			</div>
+
+			<div class="pure-control-group">
+				<label for="birthday">Birthday</label>
+				<input id="birthday" type="date" placeholder="Birthday">
+			</div>
 		</fieldset>
 
-		<fieldset class="pure-group">
-			<input type="text" class="pure-input-1-2" placeholder="Another Group">
-			<input type="text" class="pure-input-1-2" placeholder="More Stuff">
-		</fieldset>
 
-		<button type="submit" class="pure-button pure-input-1-2 pure-button-primary">Sign in</button>
+		<fieldset class="pure-group">
+			<legend>Phones</legend>
+			<div class="pure-control-group">
+				<select ng-model="contact.phones[0][1]">
+					<option>Fix</option>
+					<option>Mob</option>
+					<option>Home</option>
+					<option>Work</option>
+					<option>Old</option>
+				</select>
+				<input type="text" required ng-pattern="/[0-9]{3,}/" ng-model="contact.phones[0][0]">
+			</div>
+		</fieldset>
+		<div class="pure-controls">
+			<button type="submit" class="pure-button pure-input-1-2 pure-button-primary">Create</button>
+		</div>
 	</form>
-</div>
+	{{contact | json}}
+</article>

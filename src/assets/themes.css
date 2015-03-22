@@ -339,9 +339,10 @@
 	text-transform:uppercase;
 	background-color:#3D4F63;}
 .thmFlat #Details .title {
-	padding:0;
+	padding:0 0 0 10px;
 	height:40px;
-	font-size:18px;}
+	font-size:18px;
+	line-height:40px;}
 .thmFlat #Details .title .actions {}
 .thmFlat #Details .title .actions .pure-button {
 	padding:0;
@@ -359,7 +360,10 @@
 	margin:0;
 	background-color:#ED6454;}
 
+.thmFlat #NewContact {background-color:#8E9FB4}
+
 .thmFlat form {}
+.thmFlat .pure-form legend {border-bottom:1px solid #CCC}
 
 .input,.textarea {
 	color:#AAA;

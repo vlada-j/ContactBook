@@ -16,16 +16,22 @@ function bookConfig ( $stateProvider, $urlRouterProvider ) {
 	$urlRouterProvider.otherwise('/');
 
 	$stateProvider
-		.state ('search', {
-			url: '/',
-			templateUrl: 'app/Book/book.tpl.html',
-			controller: 'bookCtrl',
-			controllerAs: 'bookView'
+		.state('search', {
+			url:			'/',
+			templateUrl:	'app/Book/book.tpl.html',
+			controller:		'bookCtrl',
+			controllerAs:	'bookView'
 		})
-		.state ('search.details', {
-			url:'{id:[A-Z]{10,}}',
-			templateUrl: 'app/Book/Details/details.tpl.html',
-			controller: 'detailsCtrl'
+		.state('search.new', {
+			url:			'new',
+			templateUrl:	'app/Book/NewContact/newcontact.tpl.html',
+			controller:		'newContactCtrl',
+			controllerAs:	'vm'
+		})
+		.state('search.details', {
+			url:			'{id:[A-Z]{10,}}',
+			templateUrl:	'app/Book/Details/details.tpl.html',
+			controller:		'detailsCtrl'
 		});
 }
 
@@ -56,7 +62,6 @@ function bookCtrl ( DataBase, $scope, $state, BookList ) {
 	bookView.activeId = '';
 	bookView.open = function(nn){
 		BookList.demarkAllItems();
-		console.log(bookView.db.indexOf(nn));
 		BookList.markItem(nn.id);
 		$state.go('search.details', {id:nn.id});
 	};

@@ -11,6 +11,8 @@ angular
 newContactCtrl.$inject = ['DataBase', '$scope'];
 
 function newContactCtrl( DataBase, $scope ) {
-	console.log('newContactCtrl');
+	$scope.bookView.detailsOpen = true;
+	var vm = this;
+	vm.concat = {};
 }
 })();
