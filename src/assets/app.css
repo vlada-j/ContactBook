@@ -223,13 +223,14 @@ input.ng-valid {border: 1px solid green;}
 
 #Details {
 	top:0;
-	right:-300px;
+	right:-500px;
 	bottom:0;
-	width:300px;
+	width:500px;
 	overflow:hidden;
 	border-top:none;
 	position:absolute;}
 #Details .content {
+	width:100%;
 	overflow:auto;
 	position:absolute;}
 #Details .title {margin:0;}
@@ -251,7 +252,7 @@ input.ng-valid {border: 1px solid green;}
 .sideMenuOpen #Main {left:200px}
 .sideMenuOpen #CollapseMenuButton .fa:before {content:'\f191';}
 
-.detailsOpen.content {margin-right:300px;}
+.detailsOpen.content {margin-right:500px;}
 .detailsOpen #Details {right:0;}
 
 #Main.ng-enter, #Main.ng-leave.ng-leave-active {opacity:0}
