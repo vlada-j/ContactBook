@@ -8,7 +8,7 @@
 <article id="NewContact" class="content">
 
 	<form class="pure-form" name="newContactForm" novalidate>
-		<fieldset class="pure-form-aligned">
+		<fieldset id="PersonalInfo" class="pure-form-aligned">
 			<legend>Info</legend>
 			<div class="pure-control-group">
 				<label for="firstname">First name</label>
@@ -45,12 +45,12 @@
 		<fieldset class="pure-group">
 			<legend>Phones</legend>
 			<div class="pure-control-group">
-				<select ng-model="contact.phones[0][1]">
-					<option>Fix</option>
-					<option>Mob</option>
-					<option>Home</option>
-					<option>Work</option>
-					<option>Old</option>
+				<select class="fa" ng-model="contact.phones[0][1]">
+					<option>&#xf095;</option>
+					<option>&#xf10b;</option>
+					<option>&#xf015;</option>
+					<option>&#xf1ad;</option>
+					<option>&#xf1ac;</option>
 				</select>
 				<input type="text" required ng-pattern="/[0-9]{3,}/" ng-model="contact.phones[0][0]">
 			</div>

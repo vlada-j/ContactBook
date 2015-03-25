@@ -361,6 +361,7 @@
 	background-color:#ED6454;}
 
 .thmFlat #NewContact {background-color:#8E9FB4}
+.thmFlat #PersonalInfo .pure-control-group label {padding-right:10px}
 
 .thmFlat form {}
 .thmFlat .pure-form legend {border-bottom:1px solid #CCC}

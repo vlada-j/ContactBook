@@ -44,6 +44,21 @@ ol ol {
 }
 .icon {display:inline-block;}
 
+.pure-form input[type=text],
+.pure-form input[type=password],
+.pure-form input[type=email],
+.pure-form input[type=url],
+.pure-form input[type=date],
+.pure-form input[type=month],
+.pure-form input[type=time],
+.pure-form input[type=datetime],
+.pure-form input[type=datetime-local],
+.pure-form input[type=week],
+.pure-form input[type=number],
+.pure-form input[type=search],
+.pure-form input[type=tel],
+.pure-form input[type=color],
+.pure-form select {height:34px}
 
 input.ng-invalid {border: 1px solid red;}
 input.ng-valid {border: 1px solid green;}
@@ -244,6 +259,14 @@ input.ng-valid {border: 1px solid green;}
 #Details > [ui-view] {position:absolute;width:100%;height:100%}
 #Details > [ui-view].ng-enter, #Details > [ui-view].ng-leave.ng-leave-active {opacity:0}
 #Details > [ui-view].ng-leave, #Details > [ui-view].ng-enter.ng-enter-active {opacity:1}
+
+
+#NewContact .pure-control-group {overflow:auto}
+#NewContact .pure-control-group label,
+#NewContact .pure-control-group select {width:40%;float:left}
+#NewContact .pure-control-group label {margin:0}
+#NewContact .pure-control-group input {width:60%;float:right}
+#NewContact .pure-control-group select {width:20%}
 
 
 .sideMenuOpen #Logo {width:200px}
