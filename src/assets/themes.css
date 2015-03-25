@@ -361,7 +361,18 @@
 	background-color:#ED6454;}
 
 .thmFlat #NewContact {background-color:#8E9FB4}
-.thmFlat #PersonalInfo .pure-control-group label {padding-right:10px}
+.thmFlat #PersonalInfo .pure-control-group label {
+	width:150px;
+	line-height:34px;
+	padding-right:10px}
+.thmFlat #PersonalInfo .pure-control-group input,
+.thmFlat #NewContact .pure-control-group input {
+	float:none;
+	width:300px}
+.thmFlat #NewContact .pure-control-group select {
+	width:60px;
+	margin-left:80px;
+	margin-right:10px}
 
 .thmFlat form {}
 .thmFlat .pure-form legend {border-bottom:1px solid #CCC}

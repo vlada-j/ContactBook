@@ -46,11 +46,11 @@
 			<legend>Phones</legend>
 			<div class="pure-control-group">
 				<select class="fa" ng-model="contact.phones[0][1]">
-					<option>&#xf095;</option>
-					<option>&#xf10b;</option>
-					<option>&#xf015;</option>
-					<option>&#xf1ad;</option>
-					<option>&#xf1ac;</option>
+					<option value="fix">&#xf095;</option>
+					<option value="mob">&#xf10b;</option>
+					<option value="home">&#xf015;</option>
+					<option value="work">&#xf1ad;</option>
+					<option value="fax">&#xf1ac;</option>
 				</select>
 				<input type="text" required ng-pattern="/[0-9]{3,}/" ng-model="contact.phones[0][0]">
 			</div>
