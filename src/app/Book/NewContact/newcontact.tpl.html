@@ -44,20 +44,31 @@
 
 		<fieldset class="pure-group">
 			<legend>Phones</legend>
-			<div class="pure-control-group">
-				<select class="fa" ng-model="contact.phones[0][1]">
-					<option value="fix">&#xf095;</option>
-					<option value="mob">&#xf10b;</option>
-					<option value="home">&#xf015;</option>
-					<option value="work">&#xf1ad;</option>
-					<option value="fax">&#xf1ac;</option>
-				</select>
-				<input type="text" required ng-pattern="/[0-9]{3,}/" ng-model="contact.phones[0][0]">
-			</div>
+			<div auto-add collection="vm.contact.phones"></div>
 		</fieldset>
+
+		<fieldset class="pure-group">
+			<legend>Emails</legend>
+			<div auto-add collection="vm.contact.emails"></div>
+		</fieldset>
+
 		<div class="pure-controls">
 			<button type="submit" class="pure-button pure-input-1-2 pure-button-primary">Create</button>
 		</div>
 	</form>
 	{{contact | json}}
 </article>
+
+
+<script id="autoAdd.tpl.html" type="text/ng-template">
+	<div class="pure-control-group" ng-repeat="item in collection">
+		<select class="fa" ng-model="item[1]">
+			<option value="fix">&#xf095;</option>
+			<option value="mob">&#xf10b;</option>
+			<option value="home">&#xf015;</option>
+			<option value="work">&#xf1ad;</option>
+			<option value="fax">&#xf1ac;</option>
+		</select>
+		<input type="text" required ng-pattern="/[0-9]{3,}/" ng-model="item[0]">
+	</div>
+</script>
