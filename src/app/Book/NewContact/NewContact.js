@@ -41,7 +41,14 @@ function autoAdd() {
 		root = ele;
 		if(!(scope.collection instanceof Array)) { scope.collection = []; }
 		if(scope.collection.length===0) { scope.collection.push(['','']); }
-		console.log('autoAdd', scope.collection);
+		scope.$watch('collection[0][0]', function(n, m) {
+			console.log('CHANGE', n, m);
+			scope.collection.forEach(valid);
+		});
+	}
+
+	function valid(e,i) {
+		console.log(i, e.$invalid);
 	}
 /*
 	function getValidation() {
