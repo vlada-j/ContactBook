@@ -43,7 +43,9 @@ function autoAdd() {
 		if(!(scope.collection instanceof Array)) { scope.collection = []; }
 		if(scope.collection.length===0) { scope.collection.push(['','']); }
 
+		scope.empty = function(it) { console.log('empty', it); };
 	}
+
 
 
 	return {
@@ -51,7 +53,6 @@ function autoAdd() {
 			collection:'='
 		},
 		templateUrl:'autoAdd.tpl.html',
-		replace:true,
 		restrict:'A',
 		link:link
 	}
@@ -68,13 +69,17 @@ function typeField() {
 	//--------------------------------------------------------------------------------------------------
 	function link(scope, ele, attrs) {
 		root = ele;
-		console.log('typeField', scope.typeField);
 		scope.data = {
 			value: scope.typeField[0],
 			type: scope.typeField[1]
-		}
-		scope.$watch('data.value', function(n, m) {
-			console.log('CHANGE', n, m, ele.children()[1]);
+		};
+
+		scope.$watch('data.value', function(n, o) {
+			if(n !== o) {
+				if(n === '' || n === undefined) {
+					scope.typeFieldCallback(scope.typeField);
+				}
+			}
 		});
 	}
 	/*
@@ -89,7 +94,8 @@ function typeField() {
 
 	return {
 		scope:{
-			typeField:'='
+			typeField:'=',
+			typeFieldCallback:'='
 		},
 		templateUrl:'typeField.tpl.html',
 		replace:true,
