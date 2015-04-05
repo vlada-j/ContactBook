@@ -38,7 +38,7 @@ function AppCtrl($rootScope, DataBase) {
 	stage.isLoaded = true;
 	stage.thm = 'thmFlat';
 	stage.sideMenuOpen = false;
-	stage.detailsOpen = false;
+//	stage.detailsOpen = false;
 	$rootScope.stage = stage;
 
 	DataBase.load();

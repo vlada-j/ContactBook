@@ -13,7 +13,7 @@ angular
 newContactCtrl.$inject = ['DataBase', '$scope'];
 
 function newContactCtrl( DataBase, $scope ) {
-	$scope.bookView.detailsOpen = true;
+	$scope.$parent.bookView.openDetails();
 	var vm = this;
 	vm.contact = {
 		firstName:'',
@@ -22,11 +22,12 @@ function newContactCtrl( DataBase, $scope ) {
 		nick:'',
 		address:'',
 		birthday:'',
-		phones:[["999666","mob"],["666999","fix"]],
+		phones:[["123","mob"],["456","fix"],["789",""]],
 		emails:[],
 		links:[],
 		ims:[]
 	};
+	console.log('NEW CTRL', $scope.$parent.bookView.detailsOpen);
 }
 
 

@@ -58,7 +58,8 @@ bookCtrl.$inject = [ 'DataBase', '$scope', '$state', 'BookList' ];
 function bookCtrl ( DataBase, $scope, $state, BookList ) {
 	var bookView = this;
 	bookView.db = DataBase.getData();
-	bookView.detailsOpen = false;
+	bookView.openDetails = function() { bookView.detailsOpen = true; };
+	bookView.isDetailsOpen = function() { return !!bookView.detailsOpen; };
 	bookView.activeId = '';
 	bookView.open = function(nn){
 		BookList.demarkAllItems();
