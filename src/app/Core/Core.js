@@ -4,6 +4,12 @@
 angular
 	.module('App.Core', [])
 	.config(Config)
+	.value('Stage', {
+		isLoaded:true,
+		thm:'thmFlat',
+		sideMenuOpen:false,
+		detailsOpen:false
+	})
 	.controller('AppCtrl', AppCtrl);
 
 
@@ -31,15 +37,17 @@ function Config( $stateProvider, $urlRouterProvider) {
 //**************************************************************************************************
 // App main controller
 //**************************************************************************************************
-AppCtrl.$inject = ['$rootScope', 'DataBase'];
+AppCtrl.$inject = ['$scope', 'DataBase', 'Stage'];
 
-function AppCtrl($rootScope, DataBase) {
-	var stage = this;
-	stage.isLoaded = true;
+function AppCtrl($scope, DataBase, Stage) {
+//	var stage = this;
+/*	stage.isLoaded = true;
 	stage.thm = 'thmFlat';
 	stage.sideMenuOpen = false;
-//	stage.detailsOpen = false;
-	$rootScope.stage = stage;
+//	stage.detailsOpen = false;*/
+	$scope.stage = Stage;
+
+	console.log('Stage', Stage);
 
 	DataBase.load();
 	//DataBase.clearData();
