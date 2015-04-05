@@ -43,7 +43,7 @@
 
 
 		<fieldset class="pure-group">
-			<legend>Phones</legend>
+			<legend>Phones</legend>{{vm.contact.phones}}
 			<div auto-add collection="vm.contact.phones"></div>
 		</fieldset>
 
@@ -69,13 +69,13 @@
 
 <script id="typeField.tpl.html" type="text/ng-template">
 	<div>
-		<select class="fa" ng-model="data.type">
+		<select class="fa" ng-model="data[1]">
 			<option value="fix">&#xf095;</option>
 			<option value="mob">&#xf10b;</option>
 			<option value="home">&#xf015;</option>
 			<option value="work">&#xf1ad;</option>
 			<option value="fax">&#xf1ac;</option>
 		</select>
-		<input type="text" required ng-pattern="/[0-9]{3,}/" ng-model="data.value" ng-model-options="{updateOn:'blur'}">
+		<input type="text" required ng-pattern="/[0-9]{3,}/" ng-model="data[0]" ng-model-options="{updateOn:'blur'}">
 	</div>
 </script>

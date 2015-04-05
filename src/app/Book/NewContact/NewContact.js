@@ -35,18 +35,34 @@ function newContactCtrl( DataBase, $scope ) {
 //autoAdd.$inject = ['$timeout'];
 
 function autoAdd() {
-	var root;
 
 	//--------------------------------------------------------------------------------------------------
 	function link(scope, ele, attrs) {
-		root = ele;
-		if(!(scope.collection instanceof Array)) { scope.collection = []; }
-		if(scope.collection.length===0) { scope.collection.push(['','']); }
+		var root = ele;
+		var col = scope.collection;
+		if(!(col instanceof Array)) { col = []; }
+		if(col.length===0) { col.push(['','']); }
 
-		scope.empty = function(it) { console.log('empty', it); };
+		scope.empty = function(it) {
+			if(col.length>0 && it.length===2) {
+				update(col, it);
+			} else {
+				console.log('Error:', col, it);
+			}
+		};
+
+		update(col);
 	}
 
-
+	function update(c, i) {
+		var l = c[c.length-1];
+		if(l[0] !== undefined && l[0] !== '') {
+			c.push(['', '']);
+		}
+		if(i && !i[0]) {
+			c.splice(c.indexOf(i), 1);
+		}
+	}
 
 	return {
 		scope:{
@@ -69,16 +85,11 @@ function typeField() {
 	//--------------------------------------------------------------------------------------------------
 	function link(scope, ele, attrs) {
 		root = ele;
-		scope.data = {
-			value: scope.typeField[0],
-			type: scope.typeField[1]
-		};
+		scope.data = scope.typeField;
 
-		scope.$watch('data.value', function(n, o) {
+		scope.$watch('data[0]', function(n, o) {
 			if(n !== o) {
-				if(n === '' || n === undefined) {
-					scope.typeFieldCallback(scope.typeField);
-				}
+				scope.typeFieldCallback(scope.typeField);
 			}
 		});
 	}
