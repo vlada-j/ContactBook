@@ -37,10 +37,10 @@ function Config( $stateProvider, $urlRouterProvider) {
 //**************************************************************************************************
 // App main controller
 //**************************************************************************************************
-AppCtrl.$inject = ['$scope', 'DataBase', 'Stage'];
+AppCtrl.$inject = ['Stage', 'DataBase'];
 
-function AppCtrl($scope, DataBase, Stage) {
-	$scope.Stage = Stage;
+function AppCtrl(Stage, DataBase) {
+	Stage = angular.extend(this, Stage);
 
 	DataBase.load();
 	//DataBase.clearData();
