@@ -40,14 +40,7 @@ function Config( $stateProvider, $urlRouterProvider) {
 AppCtrl.$inject = ['$scope', 'DataBase', 'Stage'];
 
 function AppCtrl($scope, DataBase, Stage) {
-//	var stage = this;
-/*	stage.isLoaded = true;
-	stage.thm = 'thmFlat';
-	stage.sideMenuOpen = false;
-//	stage.detailsOpen = false;*/
-	$scope.stage = Stage;
-
-	console.log('Stage', Stage);
+	$scope.Stage = Stage;
 
 	DataBase.load();
 	//DataBase.clearData();

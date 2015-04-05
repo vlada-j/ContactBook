@@ -12,7 +12,6 @@ settingsCtrl.$inject = ['DataBase'];
 
 function settingsCtrl( DataBase ) {
 	var vm = this;
-	console.log('Settings-CTRL', typeof DataBase);
 	vm.db = angular.toJson( DataBase.getData() );
 	vm.newdb = '';
 	vm.save = function() {

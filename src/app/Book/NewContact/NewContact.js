@@ -27,7 +27,6 @@ function newContactCtrl( DataBase, $scope ) {
 		links:[],
 		ims:[]
 	};
-	console.log('NEW CTRL', $scope.$parent.bookView.detailsOpen);
 }
 
 
