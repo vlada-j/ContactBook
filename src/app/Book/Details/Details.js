@@ -8,11 +8,12 @@ angular
 
 //**************************************************************************************************
 
-detailsCtrl.$inject = ['DataBase', '$scope', '$stateParams'];
+detailsCtrl.$inject = ['DataBase', '$scope', '$stateParams', 'Stage'];
 
-function detailsCtrl( DataBase, $scope, $stateParams ) {
-	$scope.bookView.detailsOpen = true;
+function detailsCtrl( DataBase, $scope, $stateParams, Stage ) {
+	Stage.detailsOpen = true;
 	$scope.bookView.activeId = $stateParams.id;
 	$scope.contact = DataBase.getContact($stateParams.id);
+console.log('details ctrl');
 }
 })();
