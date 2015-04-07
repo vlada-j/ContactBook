@@ -53,9 +53,9 @@ BookList.prototype.demarkAllItems = function() {
 
 //**************************************************************************************************
 
-bookCtrl.$inject = [ 'DataBase', '$scope', '$state', '$stateParams', 'BookList', 'Stage' ];
+bookCtrl.$inject = [ 'DataBase', '$scope', '$state', 'BookList', 'Stage' ];
 
-function bookCtrl ( DataBase, $scope, $state, $stateParams, BookList, Stage ) {
+function bookCtrl ( DataBase, $scope, $state, BookList, Stage ) {
 	var bookView = this;
 	bookView.db = DataBase.getData();
 	bookView.openDetails = function() { Stage.detailsOpen = true; };
@@ -66,12 +66,17 @@ function bookCtrl ( DataBase, $scope, $state, $stateParams, BookList, Stage ) {
 		BookList.markItem(nn.id);
 		$state.go('search.details', {id:nn.id});
 	};
-console.log('book ctrl', $stateParams.id);
+
 	$scope.$on('$stateChangeSuccess', function() {
-console.log('stateChangeSuccess', $stateParams);
-		bookView.activeId = '';
-//		Stage.detailsOpen = false;
-		BookList.demarkAllItems();
+		var id = $state.params.id;
+		if(id) {
+			bookView.activeId = id;
+			BookList.markItem(id);
+		} else {
+			bookView.activeId = '';
+			BookList.demarkAllItems();
+		}
+		Stage.detailsOpen = !$state.is('search');
 	});
 }
 
