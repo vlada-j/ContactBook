@@ -2,7 +2,9 @@
 'use strict';
 
 angular
-	.module('App.Book', [])
+	.module('App.Book', [
+		'App.Book.Contact'
+	])
 	.config(bookConfig)
 	.service('BookList', BookList)
 	.controller('bookCtrl', bookCtrl)
