@@ -261,12 +261,12 @@ input.ng-valid {border: 1px solid green;}
 #Details > [ui-view].ng-leave, #Details > [ui-view].ng-enter.ng-enter-active {opacity:1}
 
 
-#NewContact .pure-control-group {overflow:auto}
-#NewContact .pure-control-group label,
-#NewContact .pure-control-group select {width:40%;float:left}
-#NewContact .pure-control-group label {margin:0}
-#NewContact .pure-control-group input {width:60%;float:right}
-#NewContact .pure-control-group select {width:20%}
+#Contact .pure-control-group {overflow:auto}
+#Contact .pure-control-group label,
+#Contact .pure-control-group select {width:40%;float:left}
+#Contact .pure-control-group label {margin:0}
+#Contact .pure-control-group input {width:60%;float:right}
+#Contact .pure-control-group select {width:20%}
 
 
 .sideMenuOpen #Logo {width:200px}

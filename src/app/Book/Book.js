@@ -26,7 +26,7 @@ function bookConfig ( $stateProvider, $urlRouterProvider ) {
 		})
 		.state('search.new', {
 			url:			'new',
-			templateUrl:	'app/Book/NewContact/newcontact.tpl.html',
+			templateUrl:	'app/Book/Contact/contact.tpl.html',
 			controller:		'newContactCtrl',
 			controllerAs:	'vm'
 		})

@@ -1,11 +1,11 @@
 <h2 class="title">
-	Create new contact
+	{{vm.title}}
 	<span class="actions">
 		<a class="button-error pure-button fa fa-times" ui-sref="search" href="#/"></a>
 	</span>
 </h2>
 
-<article id="NewContact" class="content">
+<article id="Contact" class="content">
 
 	<form class="pure-form" name="newContactForm" novalidate>
 		<fieldset id="PersonalInfo" class="pure-form-aligned">
@@ -53,7 +53,7 @@
 		</fieldset>
 
 		<div class="pure-controls">
-			<button type="submit" class="pure-button pure-input-1-2 pure-button-primary">Create</button>
+			<button type="submit" class="pure-button pure-input-1-2 pure-button-primary">{{vm.submit}}</button>
 		</div>
 	</form>
 	{{contact | json}}

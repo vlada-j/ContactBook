@@ -25,6 +25,8 @@ function newContactCtrl( DataBase, $scope ) {
 		links:[],
 		ims:[]
 	};
+	vm.title = 'Create new contact';
+	vm.submit = 'Create';
 }
 
 })();
