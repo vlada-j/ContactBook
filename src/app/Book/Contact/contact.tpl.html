@@ -12,22 +12,22 @@
 			<legend>Info</legend>
 			<div class="pure-control-group">
 				<label for="firstname">First name</label>
-				<input id="firstname" type="text" placeholder="First name" name="firstName" ng-model="contact.firstName" ng-pattern="/[a-zA-Z0-9]{3,}/">
+				<input id="firstname" type="text" placeholder="First name" name="firstName" ng-model="vm.contact.firstName" ng-pattern="/[a-zA-Z0-9]{3,}/">
 			</div>
 
 			<div class="pure-control-group">
 				<label for="middlename">Middle name</label>
-				<input id="middlename" type="text" placeholder="Middle name" name="middleName" ng-model="contact.middleName" ng-pattern="/[a-zA-Z0-9]{3,}/">
+				<input id="middlename" type="text" placeholder="Middle name" name="middleName" ng-model="vm.contact.middleName" ng-pattern="/[a-zA-Z0-9]{3,}/">
 			</div>
 
 			<div class="pure-control-group">
 				<label for="lastname">Last name</label>
-				<input id="lastname" type="text" placeholder="Last name" name="lastName" ng-model="contact.lastName" ng-pattern="/[a-zA-Z0-9]{3,}/">
+				<input id="lastname" type="text" placeholder="Last name" name="lastName" ng-model="vm.contact.lastName" ng-pattern="/[a-zA-Z0-9]{3,}/">
 			</div>
 
 			<div class="pure-control-group">
 				<label for="nick">Nick</label>
-				<input id="nick" type="text" placeholder="Nick" name="nick" ng-model="contact.nick" ng-pattern="/[a-zA-Z0-9]{3,}/">
+				<input id="nick" type="text" placeholder="Nick" name="nick" ng-model="vm.contact.nick" ng-pattern="/[a-zA-Z0-9]{3,}/">
 			</div>
 
 			<div class="pure-control-group">
@@ -56,7 +56,7 @@
 			<button type="submit" class="pure-button pure-input-1-2 pure-button-primary">{{vm.submit}}</button>
 		</div>
 	</form>
-	{{contact | json}}
+	{{vm.contact | json}}
 </article>
 
 

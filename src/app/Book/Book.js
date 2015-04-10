@@ -34,6 +34,12 @@ function bookConfig ( $stateProvider, $urlRouterProvider ) {
 			url:			'{id:[A-Z]{10,}}',
 			templateUrl:	'app/Book/Details/details.tpl.html',
 			controller:		'detailsCtrl'
+		})
+		.state('search.edit', {
+			url:			'{id:[A-Z]{10,}}/edit',
+			templateUrl:	'app/Book/Contact/contact.tpl.html',
+			controller:		'editContactCtrl',
+			controllerAs:	'vm'
 		});
 }
 
