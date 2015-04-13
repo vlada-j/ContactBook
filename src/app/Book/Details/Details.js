@@ -14,6 +14,5 @@ function detailsCtrl( DataBase, $scope, $stateParams, Stage ) {
 	Stage.detailsOpen = true;
 	$scope.bookView.activeId = $stateParams.id;
 	$scope.contact = DataBase.getContact($stateParams.id);
-console.log('details ctrl');
 }
 })();

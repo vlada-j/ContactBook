@@ -7,7 +7,7 @@
 
 <article id="Contact" class="content">
 
-	<form class="pure-form" name="newContactForm" novalidate>
+	<form class="pure-form" name="contactForm" novalidate>
 		<fieldset id="PersonalInfo" class="pure-form-aligned">
 			<legend>Info</legend>
 			<div class="pure-control-group">
@@ -42,6 +42,23 @@
 		</fieldset>
 
 
+
+
+		<fieldset class="pure-group">
+			<legend>XXX</legend>
+			<div ng-form="xxx" ng-repeat="xx in vm.contact.test">
+				<select class="fa" ng-model="xx[1]">
+					<option value="fix">&#xf095;</option>
+					<option value="mob">&#xf10b;</option>
+					<option value="home">&#xf015;</option>
+					<option value="work">&#xf1ad;</option>
+					<option value="fax">&#xf1ac;</option>
+				</select>
+				<input type="text" required ng-pattern="/[0-9]{3,}/" ng-model="xx[0]" ng-model-options="{updateOn:'blur'}">
+				{{vm.test(xx, xxx.$error)}}
+			</div>
+		</fieldset>
+
 		<fieldset class="pure-group">
 			<legend>Phones</legend>
 			<div auto-add collection="vm.contact.phones"></div>
@@ -56,7 +73,9 @@
 			<button type="submit" class="pure-button pure-input-1-2 pure-button-primary">{{vm.submit}}</button>
 		</div>
 	</form>
-	{{vm.contact | json}}
+	{{vm.contact | json}}<hr>
+	{{vm.contactForm | json}}<hr>
+	{{contactForm | json}}<hr>
 </article>
 
 

@@ -19,6 +19,17 @@ function editContactCtrl( DataBase, $scope, $stateParams, Stage ) {
 	vm.contact = DataBase.getContact(id);
 	vm.title = 'Edit contact';
 	vm.submit = 'Edit';
+//	vm.contactForm = {};
+//	console.log($scope.contactForm, contactForm);
+
+	vm.test = function(n, er) {
+		console.log('TEST', n, er);
+	};
+
+	vm.contact.test = [
+		[123,456],
+		[789,0]
+	];
 }
 
 })();

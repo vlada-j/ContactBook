@@ -67,10 +67,10 @@ function typeField() {
 	/*
 	 function getValidation() {
 	 var c=this.contact,
-	 n=this.newContactForm;
+	 n=this.contactForm;
 	 if(c.firstName==='' && c.middleName==='' && c.lastName==='' && c.nick==='') {return true;}
 	 if(n.firstName.$invalid || n.middleName.$invalid || n.lastName.$invalid || n.nick.$invalid) {return true;}
-	 return this.newContactForm.$invalid;
+	 return this.contactForm.$invalid;
 	 }*/
 
 
