@@ -26,6 +26,7 @@ function editContactCtrl( DataBase, $scope, $stateParams, Stage ) {
 		console.log('TEST', n, er);
 		if(er.required) {
 			console.log('REMOVE', vm.contact.test.indexOf(n));
+			vm.contact.test.splice(vm.contact.test.indexOf(n), 1);
 		}
 	};
 
