@@ -5,7 +5,7 @@ angular
 	.module('App.Book.Contact', [])
 	.directive ('autoAdd', autoAdd)
 	.directive ('typeField', typeField)
-	.directive ('xxx', xxx);
+	.directive ('autoRemove', autoRemove);
 
 
 //**************************************************************************************************
@@ -90,37 +90,30 @@ function typeField() {
 
 
 //**************************************************************************************************
-function xxx() {
+function autoRemove() {
 
 	//--------------------------------------------------------------------------------------------------
 	function link(scope, ele, attrs) {
 		var root = ele;
-		var col = scope.collection;
-		if(!(col instanceof Array)) { col = []; }
-		if(col.length===0) { col.push(['','']); }
+		var it = scope.autoRemove;
 
-		console.log('xxx', col);
+//		console.log('autoRemove', scope, scope.autoRemove);
+		scope.$watch('autoRemove.value', function(nv, ov) {
+			console.log('watch', nv, ov);
+		});
 
-		/*		scope.empty = function(it) {
-			if(col.length>0 && it.length===2) {
-				update(col, it);
-			} else {
-				console.log('Error:', col, it);
-			}
-		};
-
-		update(col);*/
 	}
 
 
 	return {
 		scope:{
-			collection:'=',
-			item:'='
+	//		collection:'=',
+			autoRemove:'=',
+			data:'='
 		},
 		restrict:'A',
-		transclude:true,
-		templateUrl:'xxx.tpl.html',
+//		transclude:true,
+//		templateUrl:'xxx.tpl.html',
 		link:link
 	}
 }

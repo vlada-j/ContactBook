@@ -31,8 +31,9 @@ function editContactCtrl( DataBase, $scope, $stateParams, Stage ) {
 	};
 
 	vm.contact.test = [
-		[123,456],
-		[789,0]
+		[123,''],
+		[456,''],
+		[789,'']
 	];
 }
 

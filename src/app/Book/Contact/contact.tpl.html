@@ -46,16 +46,16 @@
 
 		<fieldset class="pure-group">
 			<legend>XXX</legend>
-			<div xxx collection="vm.contact.test">
-				<select class="fa" ng-model="item[1]">
+			<div class="pure-control-group" ng-form="xxx" ng-repeat="item in vm.contact.test" auto-remove="xxx">
+				<!--{{vm.test(item, xxx)}}-->
+				<select class="fa" ng-model="item[1]" name="type">
 					<option value="fix">&#xf095;</option>
 					<option value="mob">&#xf10b;</option>
 					<option value="home">&#xf015;</option>
 					<option value="work">&#xf1ad;</option>
 					<option value="fax">&#xf1ac;</option>
 				</select>
-				<input type="text" required ng-pattern="/[0-9]{3,}/" ng-model="item[0]" ng-model-options="{updateOn:'blur'}">
-				<!--{{vm.test(xx, xxx.$error)}}-->
+				<input type="text" name="value" required ng-pattern="/[0-9]{3,}/" ng-model="item[0]" ng-model-options="{updateOn:'blur'}">
 			</div>
 		</fieldset>
 
@@ -76,13 +76,15 @@
 	{{vm.contact | json}}
 </article>
 
-
 <script id="xxx.tpl.html" type="text/ng-template">
 	<div class="pure-control-group" ng-form="xxx" ng-repeat="item in collection">
+		{{data=item}}
 		<ng-transclude></ng-transclude>
-		{{item}}
 	</div>
 </script>
+
+
+
 
 <script id="autoAdd.tpl.html" type="text/ng-template">
 	<div class="pure-control-group" ng-repeat="item in collection">
