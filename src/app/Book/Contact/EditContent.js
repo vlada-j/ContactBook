@@ -35,6 +35,7 @@ function editContactCtrl( DataBase, $scope, $stateParams, Stage ) {
 		[456,''],
 		[789,'']
 	];
+	vm.obj = { zxc: 'asd' };
 }
 
 })();

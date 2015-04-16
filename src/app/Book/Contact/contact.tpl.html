@@ -61,7 +61,7 @@
 
 		<fieldset class="pure-group">
 			<legend>Phones</legend>
-			<div auto-add collection="vm.contact.phones"></div>
+			<div auto-add collection="vm.contact.phones">#{{$parent.obj.zxc}}#</div>
 		</fieldset>
 
 		<fieldset class="pure-group">
@@ -76,19 +76,13 @@
 	{{vm.contact | json}}
 </article>
 
-<script id="xxx.tpl.html" type="text/ng-template">
-	<div class="pure-control-group" ng-form="xxx" ng-repeat="item in collection">
-		{{data=item}}
-		<ng-transclude></ng-transclude>
-	</div>
-</script>
-
 
 
 
 <script id="autoAdd.tpl.html" type="text/ng-template">
 	<div class="pure-control-group" ng-repeat="item in collection">
 		<div type-field="item" type-field-callback="empty"></div>
+		<div ng-transclude></div>@{{obj.zxc}}@
 	</div>
 </script>
 

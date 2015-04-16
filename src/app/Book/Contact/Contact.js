@@ -25,7 +25,8 @@ function autoAdd() {
 				console.log('Error:', col, it);
 			}
 		};
-
+console.log('autoAdd', scope);
+		scope.obj = { zxc: 'ZXC' };
 		update(col);
 	}
 
@@ -40,7 +41,9 @@ function autoAdd() {
 	}
 
 	return {
+		transclude:true,
 		scope:{
+	//		obj:'=',
 			collection:'='
 		},
 		templateUrl:'autoAdd.tpl.html',
@@ -98,7 +101,7 @@ function autoRemove() {
 		var it = scope.autoRemove;
 
 //		console.log('autoRemove', scope, scope.autoRemove);
-		scope.$watch('autoRemove.value', function(nv, ov) {
+		scope.$watch('autoRemove.value.$modelValue', function(nv, ov) {
 			console.log('watch', nv, ov);
 		});
 
