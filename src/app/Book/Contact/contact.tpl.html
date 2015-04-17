@@ -42,23 +42,6 @@
 		</fieldset>
 
 
-
-
-		<fieldset class="pure-group">
-			<legend>XXX</legend>
-			<div class="pure-control-group" ng-form="xxx" ng-repeat="item in vm.contact.test" auto-remove="xxx">
-				<!--{{vm.test(item, xxx)}}-->
-				<select class="fa" ng-model="item[1]" name="type">
-					<option value="fix">&#xf095;</option>
-					<option value="mob">&#xf10b;</option>
-					<option value="home">&#xf015;</option>
-					<option value="work">&#xf1ad;</option>
-					<option value="fax">&#xf1ac;</option>
-				</select>
-				<input type="text" name="value" required ng-pattern="/[0-9]{3,}/" ng-model="item[0]" ng-model-options="{updateOn:'blur'}">
-			</div>
-		</fieldset>
-
 		<fieldset class="pure-group">
 			<legend>Phones</legend>
 			<div auto-add collection="vm.contact.phones">#{{$parent.obj.zxc}}#</div>
@@ -82,7 +65,7 @@
 <script id="autoAdd.tpl.html" type="text/ng-template">
 	<div class="pure-control-group" ng-repeat="item in collection">
 		<div type-field="item" type-field-callback="empty"></div>
-		<div ng-transclude></div>@{{obj.zxc}}@
+		<div ng-transclude></div>
 	</div>
 </script>
 
