@@ -13,7 +13,6 @@ function autoAdd() {
 
 	//--------------------------------------------------------------------------------------------------
 	function link(scope, ele, attrs) {
-		var root = ele;
 		var col = scope.collection;
 		if(!(col instanceof Array)) { col = []; }
 		if(col.length===0) { col.push(['','']); }
@@ -27,7 +26,15 @@ function autoAdd() {
 		};
 console.log('autoAdd', scope);
 		scope.obj = { zxc: 'ZXC' };
-		update(col);
+
+		scope.$watch('data', function(nv, ov) {
+			console.log('watch', nv, ov);	// !!!!!!!
+			if(nv !== ov) {
+
+			}
+		});
+
+//		update(col);
 	}
 
 	function update(c, i) {
