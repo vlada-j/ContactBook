@@ -45,28 +45,28 @@
 		<fieldset class="pure-group">
 			<legend>Phones</legend>
 			<div auto-add collection="vm.contact.phones">
-				<select class="fa" ng-model="$parent.item[1]">
+				<select class="fa" ng-model="$parent.item[1]" name="type">
 					<option value="fix">&#xf095;</option>
 					<option value="mob">&#xf10b;</option>
 					<option value="home">&#xf015;</option>
 					<option value="work">&#xf1ad;</option>
 					<option value="fax">&#xf1ac;</option>
 				</select>
-				<input type="text" required ng-pattern="/[0-9]{3,}/" ng-model="$parent.item[0]" ng-model-options="{updateOn:'blur'}">
+				<input type="text" required name="value" ng-pattern="/[0-9]{3,}/" ng-model="$parent.item[0]" ng-model-options="{updateOn:'blur'}">
 			</div>
 		</fieldset>
 
 		<fieldset class="pure-group">
 			<legend>Emails</legend>
 			<div auto-add collection="vm.contact.emails">
-				<select class="fa" ng-model="$parent.item[1]">
+				<select class="fa" ng-model="$parent.item[1]" name="type">
 					<option value="fix">&#xf095;</option>
 					<option value="mob">&#xf10b;</option>
 					<option value="home">&#xf015;</option>
 					<option value="work">&#xf1ad;</option>
 					<option value="fax">&#xf1ac;</option>
 				</select>
-				<input type="text" required ng-pattern="/[0-9]{3,}/" ng-model="$parent.item[0]" ng-model-options="{updateOn:'blur'}">
+				<input type="text" required name="value" ng-pattern="/[0-9]{3,}/" ng-model="$parent.item[0]" ng-model-options="{updateOn:'blur'}">
 			</div>
 		</fieldset>
 
@@ -81,22 +81,14 @@
 
 
 <script id="autoAdd.tpl.html" type="text/ng-template">
-	<div class="pure-control-group" ng-repeat="item in collection">
-		<!--<div type-field="item" type-field-callback="empty"></div>-->
-		<div ng-transclude></div>
+	<div class="pure-control-group" ng-repeat="item in collection" ng-form="from">
+		<div type-field="item" type-field-callback="empty"><div ng-transclude></div></div>
 	</div>
 </script>
 
 
 <script id="typeField.tpl.html" type="text/ng-template">
 	<div>
-		<select class="fa" ng-model="data[1]">
-			<option value="fix">&#xf095;</option>
-			<option value="mob">&#xf10b;</option>
-			<option value="home">&#xf015;</option>
-			<option value="work">&#xf1ad;</option>
-			<option value="fax">&#xf1ac;</option>
-		</select>
-		<input type="text" required ng-pattern="/[0-9]{3,}/" ng-model="data[0]" ng-model-options="{updateOn:'blur'}">
+		<div ng-transclude></div>
 	</div>
 </script>

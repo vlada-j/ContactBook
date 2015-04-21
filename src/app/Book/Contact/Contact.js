@@ -27,14 +27,24 @@ function autoAdd() {
 console.log('autoAdd', scope);
 		scope.obj = { zxc: 'ZXC' };
 
-		scope.$watch('data', function(nv, ov) {
-			console.log('watch', nv, ov);	// !!!!!!!
+		scope.$watch('collection', function(nv, ov) {
+//			console.log('watch', nv, ov);	// !!!!!!!
 			if(nv !== ov) {
 
 			}
 		});
 
-//		update(col);
+		update(col);
+		scope.watchMe = function(it) {
+			console.log('watchMe', it);
+	//		scope.$watch(it.value,
+			it.$setDirty(function(nv, ov) {
+				console.log('watch', nv, ov);	// !!!!!!!
+				if(nv !== ov) {
+
+				}
+			});
+		};
 	}
 
 	function update(c, i) {
@@ -67,9 +77,9 @@ function typeField() {
 	//--------------------------------------------------------------------------------------------------
 	function link(scope, ele, attrs) {
 		root = ele;
-		scope.data = scope.typeField;
+		scope.item = scope.typeField;
 
-		scope.$watch('data[0]', function(nv, ov) {
+		scope.$watch('item[0]', function(nv, ov) {
 			if(nv !== ov) {
 				scope.typeFieldCallback(scope.typeField);
 			}
@@ -86,12 +96,12 @@ function typeField() {
 
 
 	return {
+		transclude:true,
 		scope:{
 			typeField:'=',
 			typeFieldCallback:'='
 		},
 		templateUrl:'typeField.tpl.html',
-		replace:true,
 		restrict:'A',
 		link:link
 	}
