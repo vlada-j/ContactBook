@@ -369,7 +369,8 @@
 .thmFlat #Contact .pure-control-group input {
 	float:none;
 	width:300px}
-.thmFlat #Contact .pure-control-group select {
+.thmFlat #Contact .pure-control-group .type-field label {width:100%}
+.thmFlat #Contact .pure-control-group .type-field select {
 	width:64px;
 	margin-left:80px;
 	margin-right:10px}
@@ -381,6 +382,9 @@
 	color:#AAA;
 	border:1px solid #C1C1C1;
 	background-color:#E5E5E5;
+}
+input.ng-invalid {
+	background-color:#FE7565;
 }
 .pure-button {
 	color:#FFF;

@@ -4,8 +4,7 @@
 angular
 	.module('App.Book.Contact', [])
 	.directive ('autoAdd', autoAdd)
-	.directive ('typeField', typeField)
-	.directive ('autoRemove', autoRemove);
+	.directive ('typeField', typeField);
 
 
 //**************************************************************************************************
@@ -18,11 +17,8 @@ function autoAdd() {
 		if(col.length===0) { col.push(['','']); }
 
 		scope.empty = function(it) {
-			if(col.length>0 && it.length===2) {
-				update(col, it);
-			} else {
-				console.log('Error:', col, it);
-			}
+			if(col.length>0 && it.length===2) { update(col, it); }
+			else { console.log('Error:', col, it); }
 		};
 
 		update(col);
@@ -30,20 +26,13 @@ function autoAdd() {
 
 	function update(c, i) {
 		var l = c[c.length-1];
-		if(l[0] !== undefined && l[0] !== '') {
-			c.push(['', '']);
-		}
-		if(i && !i[0]) {
-			c.splice(c.indexOf(i), 1);
-		}
+		if (i && !i[0] && i!==l)				{ c.splice(c.indexOf(i), 1); }
+		if (l[0] !== undefined && l[0] !== '')	{ c.push(['', '']); }
 	}
 
 	return {
 		transclude:true,
-		scope:{
-	//		obj:'=',
-			collection:'='
-		},
+		scope:{collection:'='},
 		templateUrl:'autoAdd.tpl.html',
 		restrict:'A',
 		link:link
@@ -53,27 +42,20 @@ function autoAdd() {
 
 //**************************************************************************************************
 function typeField() {
-	var root;
+	var root, parent;
 
 	//--------------------------------------------------------------------------------------------------
 	function link(scope, ele, attrs) {
 		root = ele;
+		parent = scope.$parent;
 		scope.item = scope.typeField;
 
-		scope.$watch('item[0]', function(nv, ov) {
-			if(nv !== ov) {
+		scope.$watch('item[0]', function() {
+			if(scope.formX.value.$valid) {
 				scope.typeFieldCallback(scope.typeField);
 			}
 		});
 	}
-	/*
-	 function getValidation() {
-	 var c=this.contact,
-	 n=this.contactForm;
-	 if(c.firstName==='' && c.middleName==='' && c.lastName==='' && c.nick==='') {return true;}
-	 if(n.firstName.$invalid || n.middleName.$invalid || n.lastName.$invalid || n.nick.$invalid) {return true;}
-	 return this.contactForm.$invalid;
-	 }*/
 
 
 	return {
@@ -84,37 +66,6 @@ function typeField() {
 		},
 		templateUrl:'typeField.tpl.html',
 		restrict:'A',
-		link:link
-	}
-}
-
-
-
-//**************************************************************************************************
-function autoRemove() {
-
-	//--------------------------------------------------------------------------------------------------
-	function link(scope, ele, attrs) {
-		var root = ele;
-		var it = scope.autoRemove;
-
-//		console.log('autoRemove', scope, scope.autoRemove);
-		scope.$watch('autoRemove.value.$modelValue', function(nv, ov) {
-			console.log('watch', nv, ov);
-		});
-
-	}
-
-
-	return {
-		scope:{
-	//		collection:'=',
-			autoRemove:'=',
-			data:'='
-		},
-		restrict:'A',
-//		transclude:true,
-//		templateUrl:'xxx.tpl.html',
 		link:link
 	}
 }

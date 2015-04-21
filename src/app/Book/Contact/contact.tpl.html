@@ -45,28 +45,32 @@
 		<fieldset class="pure-group">
 			<legend>Phones</legend>
 			<div auto-add collection="vm.contact.phones">
-				<select class="fa" ng-model="$parent.item[1]" name="type">
-					<option value="fix">&#xf095;</option>
-					<option value="mob">&#xf10b;</option>
-					<option value="home">&#xf015;</option>
-					<option value="work">&#xf1ad;</option>
-					<option value="fax">&#xf1ac;</option>
-				</select>
-				<input type="text" required name="value" ng-pattern="/[0-9]{3,}/" ng-model="$parent.item[0]" ng-model-options="{updateOn:'blur'}">
+				<label>
+					<select class="fa" ng-model="$parent.item[1]" name="type">
+						<option value="fix">&#xf095;</option>
+						<option value="mob">&#xf10b;</option>
+						<option value="home">&#xf015;</option>
+						<option value="work">&#xf1ad;</option>
+						<option value="fax">&#xf1ac;</option>
+					</select>
+					<input type="text" name="value" ng-pattern="/[0-9]{3,}/" ng-model="$parent.item[0]" ng-model-options="{updateOn:'blur'}">
+				</label>
 			</div>
 		</fieldset>
 
 		<fieldset class="pure-group">
 			<legend>Emails</legend>
 			<div auto-add collection="vm.contact.emails">
-				<select class="fa" ng-model="$parent.item[1]" name="type">
-					<option value="fix">&#xf095;</option>
-					<option value="mob">&#xf10b;</option>
-					<option value="home">&#xf015;</option>
-					<option value="work">&#xf1ad;</option>
-					<option value="fax">&#xf1ac;</option>
-				</select>
-				<input type="text" required name="value" ng-pattern="/[0-9]{3,}/" ng-model="$parent.item[0]" ng-model-options="{updateOn:'blur'}">
+				<label>
+					<select class="fa" ng-model="$parent.item[1]" name="type">
+						<option value="fix">&#xf095;</option>
+						<option value="mob">&#xf10b;</option>
+						<option value="home">&#xf015;</option>
+						<option value="work">&#xf1ad;</option>
+						<option value="fax">&#xf1ac;</option>
+					</select>
+					<input type="text" name="value" ng-pattern="/\b[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}\b/" ng-model="$parent.item[0]" ng-model-options="{updateOn:'blur'}">
+				</label>
 			</div>
 		</fieldset>
 
@@ -74,21 +78,20 @@
 			<button type="submit" class="pure-button pure-input-1-2 pure-button-primary">{{vm.submit}}</button>
 		</div>
 	</form>
-	{{vm.contact | json}}
 </article>
 
 
-
-
+<!-- ------------------------------------------------------------------------------------------- -->
 <script id="autoAdd.tpl.html" type="text/ng-template">
-	<div class="pure-control-group" ng-repeat="item in collection" ng-form="from">
+	<div class="pure-control-group" ng-repeat="item in collection">
 		<div type-field="item" type-field-callback="empty"><div ng-transclude></div></div>
 	</div>
 </script>
 
 
+<!-- ------------------------------------------------------------------------------------------- -->
 <script id="typeField.tpl.html" type="text/ng-template">
-	<div>
+	<div class="type-field" ng-form="formX">
 		<div ng-transclude></div>
 	</div>
 </script>

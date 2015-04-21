@@ -20,7 +20,7 @@ function newContactCtrl( DataBase, $scope, $state ) {
 		nick:'',
 		address:'',
 		birthday:'',
-		phones:[["123","mob"],["456","fix"],["789",""]],
+		phones:[],
 		emails:[],
 		links:[],
 		ims:[]
