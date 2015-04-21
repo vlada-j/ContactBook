@@ -8,9 +8,9 @@ angular
 
 //**************************************************************************************************
 
-newContactCtrl.$inject = ['DataBase', '$scope'];
+newContactCtrl.$inject = ['DataBase', '$scope', '$state'];
 
-function newContactCtrl( DataBase, $scope ) {
+function newContactCtrl( DataBase, $scope, $state ) {
 	$scope.$parent.bookView.openDetails();
 	var vm = this;
 	vm.contact = {
@@ -27,6 +27,9 @@ function newContactCtrl( DataBase, $scope ) {
 	};
 	vm.title = 'Create new contact';
 	vm.submit = 'Create';
+	vm.close = function() {
+		$state.go('search');
+	};
 }
 
 })();

@@ -24,27 +24,8 @@ function autoAdd() {
 				console.log('Error:', col, it);
 			}
 		};
-console.log('autoAdd', scope);
-		scope.obj = { zxc: 'ZXC' };
-
-		scope.$watch('collection', function(nv, ov) {
-//			console.log('watch', nv, ov);	// !!!!!!!
-			if(nv !== ov) {
-
-			}
-		});
 
 		update(col);
-		scope.watchMe = function(it) {
-			console.log('watchMe', it);
-	//		scope.$watch(it.value,
-			it.$setDirty(function(nv, ov) {
-				console.log('watch', nv, ov);	// !!!!!!!
-				if(nv !== ov) {
-
-				}
-			});
-		};
 	}
 
 	function update(c, i) {
