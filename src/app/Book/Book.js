@@ -7,6 +7,7 @@ angular
 	])
 	.config(bookConfig)
 	.service('BookList', BookList)
+	.run(function(){ console.log('BOOK RUN'); })
 	.controller('bookCtrl', bookCtrl)
 	.directive('bookItem', bookItem);
 
@@ -41,6 +42,7 @@ function bookConfig ( $stateProvider, $urlRouterProvider ) {
 			controller:		'editContactCtrl',
 			controllerAs:	'vm'
 		});
+	console.log('BOOK CONFIG');
 }
 
 //**************************************************************************************************
@@ -86,6 +88,7 @@ function bookCtrl ( DataBase, $scope, $state, BookList, Stage ) {
 		}
 		Stage.detailsOpen = !$state.is('search');
 	});
+	console.log('BOOK CTRL');
 }
 
 //**************************************************************************************************
