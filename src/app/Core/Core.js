@@ -2,15 +2,15 @@
 'use strict';
 
 angular
-	.module('App.Core', [])
-	.config(Config)
-	.value('Stage', {
-		isLoaded:true,
-		thm:'thmFlat',
-		sideMenuOpen:false,
-		detailsOpen:false
-	})
-	.controller('AppCtrl', AppCtrl);
+.module('App.Core', [])
+.config(Config)
+.value('Stage', {
+	isLoaded:true,
+	thm:'thmFlat',
+	sideMenuOpen:false,
+	detailsOpen:false
+})
+.controller('AppCtrl', AppCtrl);
 
 
 //**************************************************************************************************

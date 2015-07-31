@@ -2,8 +2,8 @@
 'use strict';
 
 angular
-	.module('App.Book')
-	.controller('newContactCtrl', newContactCtrl);
+.module('App.Book')
+.controller('newContactCtrl', newContactCtrl);
 
 
 //**************************************************************************************************

@@ -2,8 +2,8 @@
 'use strict';
 
 angular
-	.module('App.Core')
-	.controller('settingsCtrl', settingsCtrl);
+.module('App.Core')
+.controller('settingsCtrl', settingsCtrl);
 
 
 //**************************************************************************************************
@@ -14,12 +14,15 @@ function settingsCtrl( DataBase ) {
 	var vm = this;
 	vm.db = angular.toJson( DataBase.getData() );
 	vm.newdb = '';
-	vm.save = function() {
+	vm.save = save;
+
+	function save() {
 		console.log('SAVE', typeof angular.fromJson(vm.newdb));
 		DataBase.clearData();
 		DataBase.setData( angular.fromJson(vm.newdb) );
 		DataBase.save();
 		vm.db = angular.toJson( DataBase.getData() );
-	};
+	}
 }
+
 })();

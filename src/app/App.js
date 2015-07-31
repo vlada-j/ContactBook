@@ -8,13 +8,13 @@
 'use strict';
 
 angular
-	.module('App', [
-		'ngAnimate',
-		'ui.router',
+.module('App', [
+	'ngAnimate',
+	'ui.router',
 
-		'App.DataBase',
-		'App.Core',
-		'App.Book'
-	]);
+	'App.DataBase',
+	'App.Core',
+	'App.Book'
+]);
 
 })();

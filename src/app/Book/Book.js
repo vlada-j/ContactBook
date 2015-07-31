@@ -2,14 +2,14 @@
 'use strict';
 
 angular
-	.module('App.Book', [
-		'App.Book.Contact'
-	])
-	.config(bookConfig)
-	.service('BookList', BookList)
-	.run(function(){ console.log('BOOK RUN'); })
-	.controller('bookCtrl', bookCtrl)
-	.directive('bookItem', bookItem);
+.module('App.Book', [
+	'App.Book.Contact'
+])
+.config(bookConfig)
+.service('BookList', BookList)
+.run(function(){ console.log('BOOK RUN'); })
+.controller('bookCtrl', bookCtrl)
+.directive('bookItem', bookItem);
 
 //**************************************************************************************************
 
@@ -51,15 +51,15 @@ BookList.$inject = ['DataBase'];
 
 function BookList (DataBase) {
 	this.db = DataBase.getData();
+
+	this.markItem = function(n) {
+		// Add "active" only on this item
+	};
+
+	this.demarkAllItems = function() {
+		// Clear "active" from all items
+	};
 }
-
-BookList.prototype.markItem = function(n) {
-	// Add "active" only on this item
-};
-
-BookList.prototype.demarkAllItems = function() {
-	// Clear "active" from all items
-};
 
 //**************************************************************************************************
 
@@ -104,7 +104,7 @@ function bookItem () {
 		replace:true,
 		restrict:'C',
 		templateUrl:'bookItem.tpl.html',
-		link:function(scope, element, attr) {
+		link:function(scope) {
 			var d = scope.itemData,
 				names = [],
 				contacts = [];

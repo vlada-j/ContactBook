@@ -2,8 +2,8 @@
 'use strict';
 
 angular
-	.module('App.Book')
-	.controller('detailsCtrl', detailsCtrl);
+.module('App.Book')
+.controller('detailsCtrl', detailsCtrl);
 
 
 //**************************************************************************************************
@@ -12,6 +12,7 @@ detailsCtrl.$inject = ['DataBase', '$scope', '$stateParams', 'Stage'];
 
 function detailsCtrl( DataBase, $scope, $stateParams, Stage ) {
 	Stage.detailsOpen = true;
+	$scope.bookView = $scope.bookView || {};
 	$scope.bookView.activeId = $stateParams.id;
 	$scope.contact = DataBase.getContact($stateParams.id);
 }

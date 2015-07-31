@@ -2,16 +2,16 @@
 'use strict';
 
 angular
-	.module('App.Book.Contact', [])
-	.directive ('autoAdd', autoAdd)
-	.directive ('typeField', typeField);
+.module('App.Book.Contact', [])
+.directive ('autoAdd', autoAdd)
+.directive ('typeField', typeField);
 
 
 //**************************************************************************************************
 function autoAdd() {
 
 	//--------------------------------------------------------------------------------------------------
-	function link(scope, ele, attrs) {
+	function link(scope) {
 		var col = scope.collection;
 		if(!(col instanceof Array)) { col = []; }
 		if(col.length===0) { col.push(['','']); }
@@ -45,7 +45,7 @@ function typeField() {
 	var root, parent;
 
 	//--------------------------------------------------------------------------------------------------
-	function link(scope, ele, attrs) {
+	function link(scope, ele) {
 		root = ele;
 		parent = scope.$parent;
 		scope.item = scope.typeField;
