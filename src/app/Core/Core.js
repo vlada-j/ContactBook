@@ -4,13 +4,16 @@
 angular
 .module('App.Core', [])
 .config(Config)
+.run(Run)
+.directive('cbHeader', cbHeader)
+.directive('cbSideMenu', cbSideMenu)
+.directive('cbContent', cbContent)
 .value('Stage', {
 	isLoaded:true,
 	thm:'thmFlat',
 	sideMenuOpen:false,
 	detailsOpen:false
-})
-.controller('AppCtrl', AppCtrl);
+});
 
 
 //**************************************************************************************************
@@ -35,12 +38,14 @@ function Config( $stateProvider, $urlRouterProvider) {
 
 
 //**************************************************************************************************
-// App main controller
+// Run
 //**************************************************************************************************
-AppCtrl.$inject = ['Stage', 'DataBase'];
+Run.$inject = ['$rootScope', 'DataBase'];
 
-function AppCtrl(Stage, DataBase) {
-	Stage = angular.extend(this, Stage);
+function Run($rootScope, DataBase) {
+	$rootScope.isLoaded = true;
+	$rootScope.sideMenuOpen = true;
+	$rootScope.detailsOpen = false;
 
 	DataBase.load();
 	//DataBase.clearData();
@@ -52,3 +57,29 @@ function AppCtrl(Stage, DataBase) {
 	//DataBase.save();
 }
 })();
+
+
+function cbHeader() {
+
+	return {
+		replace: true,
+		restrict: 'E',
+		templateUrl:'app/Core/header.tpl.html'
+	}
+}
+
+function cbSideMenu() {
+
+	return {
+		replace: true,
+		restrict: 'E',
+		templateUrl:'app/Core/sideMenu.tpl.html'
+	}
+}
+
+function cbContent() {
+
+	return {
+		restrict: 'E'
+	}
+}
