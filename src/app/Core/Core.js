@@ -4,16 +4,7 @@
 angular
 .module('App.Core', [])
 .config(Config)
-.run(Run)
-.directive('cbHeader', cbHeader)
-.directive('cbSideMenu', cbSideMenu)
-.directive('cbContent', cbContent)
-.value('Stage', {
-	isLoaded:true,
-	thm:'thmFlat',
-	sideMenuOpen:false,
-	detailsOpen:false
-});
+.run(Run);
 
 
 //**************************************************************************************************
@@ -48,38 +39,16 @@ function Run($rootScope, DataBase) {
 	$rootScope.detailsOpen = false;
 
 	DataBase.load();
-	//DataBase.clearData();
-	//DataBase.addContact({"firstName":"Vlada","middleName":"","lastName":"Janosevic","nick":"VJ","phones":[["000000",""]],"emails":[["vj@gmail.com",""]]});
-	//DataBase.addContact({"firstName":"Ivana","middleName":"","lastName":"Saric","nick":"","phones":[["999666",""],["666999",""]],"emails":[["mm@xxx.yyy",""]]});
-	//DataBase.addContact({"firstName":"Andrej","middleName":"","lastName":"","nick":"","phones":[],"emails":[["djidji@zx.xz",""]]});
-	//DataBase.addContact({"firstName":"Marko","middleName":"","lastName":"Janosevic","nick":"","emails":[["madness@code",""]]});
-	//console.log( angular.toJson(DataBase.getData()));
-	//DataBase.save();
+
+	// if is run first time, add some demo contacts
+	if( DataBase.getData().length === 0 ) {
+		DataBase.clearData();
+		DataBase.addContact({"firstName":"Aaa","middleName":"","lastName":"Bbb","nick":"","phones":[["000000",""]],"emails":[["aaabbb@gmail.com",""]]});
+		DataBase.addContact({"firstName":"Ccc","middleName":"","lastName":"Ddd","nick":"","phones":[["111111",""],["222222",""]],"emails":[["cd@xxx.yyy",""]]});
+		DataBase.addContact({"firstName":"","middleName":"","lastName":"","nick":"Eee","phones":[],"emails":[["eee@zx.xz",""]]});
+		DataBase.addContact({"firstName":"Fff","middleName":"","lastName":"Ggg","nick":"","emails":[["fff@ggg",""]]});
+		console.log( angular.toJson(DataBase.getData()));
+		DataBase.save();
+	}
 }
 })();
-
-
-function cbHeader() {
-
-	return {
-		replace: true,
-		restrict: 'E',
-		templateUrl:'app/Core/header.tpl.html'
-	}
-}
-
-function cbSideMenu() {
-
-	return {
-		replace: true,
-		restrict: 'E',
-		templateUrl:'app/Core/sideMenu.tpl.html'
-	}
-}
-
-function cbContent() {
-
-	return {
-		restrict: 'E'
-	}
-}

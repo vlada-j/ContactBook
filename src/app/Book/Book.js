@@ -63,13 +63,13 @@ function BookList (DataBase) {
 
 //**************************************************************************************************
 
-bookCtrl.$inject = [ 'DataBase', '$scope', '$state', 'BookList', 'Stage' ];
+bookCtrl.$inject = [ 'DataBase', '$scope', '$state', 'BookList', '$rootScope' ];
 
-function bookCtrl ( DataBase, $scope, $state, BookList, Stage ) {
+function bookCtrl ( DataBase, $scope, $state, BookList, $rootScope ) {
 	var bookView = this;
 	bookView.db = DataBase.getData();
-	bookView.openDetails = function() { Stage.detailsOpen = true; };
-	bookView.isDetailsOpen = function() { return !!Stage.detailsOpen; };
+	bookView.openDetails = function() { $rootScope.detailsOpen = true; };
+	bookView.isDetailsOpen = function() { return !!$rootScope.detailsOpen; };
 	bookView.activeId = '';
 	bookView.open = function(nn){
 		BookList.demarkAllItems();
@@ -86,7 +86,7 @@ function bookCtrl ( DataBase, $scope, $state, BookList, Stage ) {
 			bookView.activeId = '';
 			BookList.demarkAllItems();
 		}
-		Stage.detailsOpen = !$state.is('search');
+		$rootScope.detailsOpen = !$state.is('search');
 	});
 	console.log('BOOK CTRL');
 }

@@ -12,8 +12,10 @@ angular
 	'ngAnimate',
 	'ui.router',
 
+	'App.common',
 	'App.DataBase',
 	'App.Core',
+	'App.Search',
 	'App.Book'
 ]);
 

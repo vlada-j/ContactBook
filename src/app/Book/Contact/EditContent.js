@@ -8,9 +8,9 @@ angular
 
 //**************************************************************************************************
 
-editContactCtrl.$inject = ['DataBase', '$scope', '$stateParams', '$state', 'Stage'];
+editContactCtrl.$inject = ['DataBase', '$scope', '$stateParams', '$state'];
 
-function editContactCtrl( DataBase, $scope, $stateParams, $state, Stage ) {
+function editContactCtrl( DataBase, $scope, $stateParams, $state ) {
 	var vm = this,
 		id = $stateParams.id,
 		bv = $scope.$parent.bookView;
