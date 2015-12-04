@@ -43,12 +43,15 @@ function AppCtrl(Stage, DataBase) {
 	Stage = angular.extend(this, Stage);
 
 	DataBase.load();
-	//DataBase.clearData();
-	//DataBase.addContact({"firstName":"Vlada","middleName":"","lastName":"Janosevic","nick":"VJ","phones":[["000000",""]],"emails":[["vj@gmail.com",""]]});
-	//DataBase.addContact({"firstName":"Ivana","middleName":"","lastName":"Saric","nick":"","phones":[["999666",""],["666999",""]],"emails":[["mm@xxx.yyy",""]]});
-	//DataBase.addContact({"firstName":"Andrej","middleName":"","lastName":"","nick":"","phones":[],"emails":[["djidji@zx.xz",""]]});
-	//DataBase.addContact({"firstName":"Marko","middleName":"","lastName":"Janosevic","nick":"","emails":[["madness@code",""]]});
-	//console.log( angular.toJson(DataBase.getData()));
-	//DataBase.save();
+
+	// if is run first time, add some demo contacts
+	if( DataBase.getData().length === 0 ) {
+		DataBase.clearData();
+		DataBase.addContact({"firstName":"Aaa","middleName":"","lastName":"Bbb","nick":"","phones":[["000000",""]],"emails":[["aaabbb@gmail.com",""]]});
+		DataBase.addContact({"firstName":"Ccc","middleName":"","lastName":"Ddd","nick":"","phones":[["111111",""],["222222",""]],"emails":[["cd@xxx.yyy",""]]});
+		DataBase.addContact({"firstName":"","middleName":"","lastName":"Bbb","nick":"Eee","phones":[],"emails":[["eee@zx.xz",""]]});
+		DataBase.addContact({"firstName":"Aaa","middleName":"","lastName":"Ggg","nick":"","emails":[["aaa@ggg",""]]});
+		DataBase.save();
+	}
 }
 })();
