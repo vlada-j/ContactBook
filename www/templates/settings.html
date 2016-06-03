@@ -1,0 +1,26 @@
+<ion-view title="Settings" id="page3">
+    <ion-content padding="true" class="has-header">
+        <form class="list">
+            <ion-toggle toggle-class="toggle-positive">Toggle</ion-toggle>
+            <ion-radio>Radio</ion-radio>
+            <label class="item item-input">
+                <span class="input-label">Input</span>
+                <input type="text" placeholder="" ng-model="vm.fromls">
+            </label>
+            <button class="button button-assertive button-block" ng-click="vm.save(vm.fromls)">SAVE</button>
+            <button class="button button-balanced button-block" ng-click="vm.load()">LOAD</button>
+            <ion-item class="range range-positive">Range
+                <input type="range" value="50" min="0" max="100">
+            </ion-item>
+            <label class="item item-select">
+                <span class="input-label">Select</span>
+                <select></select>
+            </label>
+        </form>
+        <div class="button-bar">
+            <button id="settings-button1" class="button button-positive  button-block">1</button>
+            <button id="settings-button2" class="button button-positive  button-block">2</button>
+            <button id="settings-button3" class="button button-positive  button-block">3</button>
+        </div>
+    </ion-content>
+</ion-view>

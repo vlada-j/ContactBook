@@ -15,3 +15,8 @@ $RECYCLE.BIN/
 .PSDs
 .idea
 nbproject
+
+
+node_modules/
+platforms/
+plugins/
